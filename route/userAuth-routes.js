@@ -40,7 +40,10 @@ router.get(
 
 router.get(
   "/auth/google/callback",
-  passport.authenticate("google", { failureRedirect: "/", session: false }),
+  passport.authenticate("google", {
+    failureRedirect: "https://smart-shop-kro.netlify.app/",
+    session: false,
+  }),
   googleAuthCallback
 );
 
