@@ -130,7 +130,7 @@ const googleAuthCallback = async (req, res) => {
     // create a token
     const token = createToken(user._id, user.email);
     res.redirect(
-      `https://smart-shop-kro.netlify.app/?token=${token}&email=${user.email}&name=${user.name}&userId=${user._id}`
+      `/?token=${token}&email=${user.email}&name=${user.name}&userId=${user._id}`
     );
     // res
     //   .status(200)
