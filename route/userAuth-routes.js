@@ -46,7 +46,7 @@ router.get(
 
 router.get("/profile", (req, res) => {
   if (!req.user) {
-    return res.redirect("/");
+    return res.redirect("https://smart-shop-kro.netlify.app/");
   }
   console.log(req.user);
   res.send(

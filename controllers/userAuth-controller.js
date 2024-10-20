@@ -110,6 +110,12 @@ const Signup = async (req, res) => {
 
     // create a token
     const token = createToken(user._id, email);
+    await sendWelcomeEmail({
+      name: name,
+      email: email,
+      storeName: storeName === undefined ? null : storeName,
+    });
+
     res.status(200).json({ email, name, token, userId: user._id });
   } catch (e) {
     console.error(e);
@@ -124,7 +130,7 @@ const googleAuthCallback = async (req, res) => {
     // create a token
     const token = createToken(user._id, user.email);
     res.redirect(
-      `http://localhost:3001/?token=${token}&email=${user.email}&name=${user.name}&userId=${user._id}`
+      `https://smart-shop-kro.netlify.app/?token=${token}&email=${user.email}&name=${user.name}&userId=${user._id}`
     );
     // res
     //   .status(200)

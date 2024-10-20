@@ -4,6 +4,7 @@
 
 const User = require("../model/user");
 const Order = require("../model/order");
+const { sendDeliveryEmail } = require("../config/nodemailer");
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const paymentrequest = async (req, res) => {
@@ -28,8 +29,8 @@ const paymentrequest = async (req, res) => {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:3001/success",
-      cancel_url: "http://localhost:3001/cancel",
+      success_url: "https://smart-shop-kro.netlify.app/success",
+      cancel_url: "https://smart-shop-kro.netlify.app/cancel",
     });
 
     res.status(200).json({
@@ -59,6 +60,13 @@ const PaymentSuccess = async (req, res) => {
       totalAmount: totalPrice,
       status: "success",
       createdAt: new Date(), // Set to current date and time
+    });
+
+    await sendDeliveryEmail({
+      name: user.name,
+      email: user.email,
+      order_number: order._id,
+      total_amount: totalPrice,
     });
 
     console.log(order);

@@ -1,6 +1,7 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const User = require("../model/user"); // Import the User model
+const { sendWelcomeEmail } = require("../config/nodemailer");
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
@@ -16,9 +17,12 @@ passport.use(
     async (accessToken, refreshToken, profile, done) => {
       try {
         // Check if the user already exists in the database
-        let user = await User.findOne({ googleAuthId: profile.id });
-        console.log(user);
-
+        let user = await User.findOne({
+          $or: [
+            { googleAuthId: profile.id },
+            { email: profile.emails[0].value },
+          ],
+        });
         console.log(accessToken);
         console.log(refreshToken);
 
@@ -30,6 +34,11 @@ passport.use(
             email: profile.emails[0].value,
           });
           await user.save();
+
+          await sendWelcomeEmail({
+            name: profile.displayName,
+            email: profile.emails[0].value,
+          });
         }
         done(null, user);
       } catch (err) {
