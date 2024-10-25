@@ -5,7 +5,7 @@ const Product = require("./product");
 const userSchema = new mongoose.Schema({
   googleAuthId: {
     type: String,
-    unique: true,
+    unique: false,
   },
   name: {
     type: String,
