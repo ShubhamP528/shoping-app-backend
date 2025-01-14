@@ -11,6 +11,7 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 const { OAuth2Client } = require("google-auth-library");
+const { sendWelcomeEmail } = require("../config/nodemailer");
 
 const createToken = (_id, email) => {
   return jwt.sign(
