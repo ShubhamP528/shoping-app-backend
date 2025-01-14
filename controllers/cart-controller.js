@@ -14,6 +14,7 @@ const showCart = async (req, res) => {
 const addItem = async (req, res) => {
   try {
     const { quantityval } = req.body;
+    console.log(quantityval);
     let { itemId } = req.params;
 
     const objectIdItemId = new mongoose.Types.ObjectId(itemId);
@@ -26,7 +27,11 @@ const addItem = async (req, res) => {
         console.log("Product");
         console.log("Quantity: " + newCart[i].quantity);
         console.log("quantity: " + quantityval);
-        newCart[i].quantity = parseInt(quantityval);
+        if (quantityval !== null) {
+          newCart[i].quantity = parseInt(quantityval);
+        } else {
+          newCart[i].quantity += 1;
+        }
         console.log("Quantity: " + newCart[i].quantity);
         user.cart = newCart;
         user.save();
@@ -36,7 +41,7 @@ const addItem = async (req, res) => {
     }
     newCart.push({
       product: itemId,
-      quantity: quantityval,
+      quantity: 1,
     });
     user.cart = newCart;
     user.save();
@@ -49,7 +54,7 @@ const addItem = async (req, res) => {
 
 const removeItem = async (req, res) => {
   try {
-    const { itemId } = req.params;
+    const { itemId, isClear } = req.params;
     const objectIdItemId = new mongoose.Types.ObjectId(itemId);
 
     console.log(itemId);
@@ -58,7 +63,7 @@ const removeItem = async (req, res) => {
     for (let i = 0; i < newCart.length; i++) {
       if (newCart[i].product?._id.equals(objectIdItemId)) {
         newCart[i].quantity--;
-        if (newCart[i].quantity === 0) {
+        if (newCart[i].quantity === 0 || isClear) {
           newCart.splice(i, 1);
         }
         user.cart = newCart;

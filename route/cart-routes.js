@@ -10,7 +10,7 @@ const requireAuth = require("../middleware/requireAuth");
 
 router.get("/cart", requireAuth, showCart);
 router.post("/cart/:itemId", requireAuth, addItem);
-router.put("/cart/:itemId", requireAuth, removeItem);
+router.put("/cart/:itemId/:isClear", requireAuth, removeItem);
 router.delete("/cart", requireAuth, clearCart);
 
 module.exports = router;

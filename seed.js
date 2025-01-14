@@ -4,9 +4,9 @@ const arr = [
   {
     name: "Smartphone XYZ",
     images: [
-      "https://img.freepik.com/free-vector/modern-wave-background-smartphone_23-2147574229.jpg?t=st=1729386879~exp=1729390479~hmac=f39a0152d8c4d5d65368d0797173cd196b2ebfc6e6180cd6bafed1c22cd11404&w=740",
-      "https://img.freepik.com/free-vector/wavy-abstract-background-smartphone_23-2147574231.jpg?t=st=1729386998~exp=1729390598~hmac=0d942552ffa3a8603ddbac12bc6346eced9ede295fa68d49bf89f5ec83eeaac3&w=740",
-      "https://img.freepik.com/free-vector/wave-abstract-background-with-smartphone_23-2147574232.jpg?t=st=1729387001~exp=1729390601~hmac=8ec054d75e539c525d8a52a66fa92541cad1c6fb3131738e7ccdfeeb7e666924&w=740",
+      "https://img.freepik.com/free-vector/modern-wave-background-smartphone_23-2147574229.jpg",
+      "https://img.freepik.com/free-vector/wavy-abstract-background-smartphone_23-2147574231.jpg",
+      "https://img.freepik.com/free-vector/wave-abstract-background-with-smartphone_23-2147574232.jpg",
     ],
     price: 14999,
     originalPrice: 19999,
@@ -25,9 +25,9 @@ const arr = [
   {
     name: "Bluetooth Headphones ABC",
     images: [
-      "https://img.freepik.com/free-photo/headphones-with-minimalist-monochrome-background_23-2150763311.jpg?t=st=1729387074~exp=1729390674~hmac=fe8d782def67b9c2774ae7491fabef77f732f8b1c0b99deb44558c4cd29106d9&w=360",
-      "https://img.freepik.com/free-psd/technological-headphones-isolated_23-2151209615.jpg?t=st=1729387110~exp=1729390710~hmac=f2ea45bc17b1bcb78f48b42bfcde7afeff9c9634605fd068f4f44ccc7fa84a94&w=360",
-      "https://img.freepik.com/free-photo/headphones-with-minimalist-monochrome-background_23-2150763316.jpg?t=st=1729387136~exp=1729390736~hmac=5de7046db3bdcdd08a8dc4bc15cbb0241cadbd6806e08d309407b6d8c30d1a06&w=360",
+      "https://img.freepik.com/free-photo/headphones-with-minimalist-monochrome-background_23-2150763311.jpg",
+      "https://img.freepik.com/free-psd/technological-headphones-isolated_23-2151209615.jpg",
+      "https://img.freepik.com/free-photo/headphones-with-minimalist-monochrome-background_23-2150763316.jpg",
     ],
     price: 1999,
     originalPrice: 2499,
@@ -47,9 +47,9 @@ const arr = [
   {
     name: "Smart TV DEF",
     images: [
-      "https://img.freepik.com/free-photo/tv-with-city-skyline-illuminated-dusk-with-traffic-motion-generative-ai_188544-19469.jpg?t=st=1729387198~exp=1729390798~hmac=d0c539be7551525a5d68188d888d6b560caf02ec9cf144a22e1916d1e30b7e23&w=1060",
+      "https://img.freepik.com/free-photo/tv-with-city-skyline-illuminated-dusk-with-traffic-motion-generative-ai_188544-19469.jpg",
       "https://img.freepik.com/free-psd/modern-tv-isolated_23-2151430326.jpg",
-      "https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg?t=st=1729387255~exp=1729390855~hmac=e1aaa9b9cc7eb0e0f432b8b971a61ee771323832db9ca1a8a8a18d227026265c&w=1060",
+      "https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg",
     ],
     price: 24999,
     originalPrice: 29999,
@@ -69,8 +69,8 @@ const arr = [
     name: "Smartwatch GHI",
     images: [
       "https://img.freepik.com/free-photo/smartwatch-with-digital-assistant-arrangement_23-2149108009.jpg",
-      "https://img.freepik.com/free-vector/fitness-trackers-concept_23-2148529803.jpg?t=st=1733972543~exp=1733976143~hmac=6fb5eb189b365facb99f14730418775edce677d7517461338caf76bd50a0dc8a&w=740",
-      "https://img.freepik.com/free-vector/smart-watch-cartoon-vector-icon-illustration-technology-object-icon-isolated-flat-vector_138676-13479.jpg?t=st=1733972588~exp=1733976188~hmac=ab0f22a2eb7779f8be1d7b648371a7066cd2b848fbf305597316cb26953c6c07&w=740",
+      "https://img.freepik.com/free-vector/fitness-trackers-concept_23-2148529803.jpg",
+      "https://img.freepik.com/free-vector/smart-watch-cartoon-vector-icon-illustration-technology-object-icon-isolated-flat-vector_138676-13479.jpg",
     ],
     price: 4499,
     originalPrice: 5999,
@@ -84,9 +84,9 @@ const arr = [
   {
     name: "Laptop JKL",
     images: [
-      "https://img.freepik.com/free-vector/notebook-with-social-media-icon-theme-hands-isolated-white-background_1308-44904.jpg?t=st=1729387489~exp=1729391089~hmac=8c999fef1731def79e27645c49f6f54b652398bebc704f758e0dbe1db51398fb&w=826",
-      "https://img.freepik.com/free-vector/laptop-with-education-icon-isolated_1308-48315.jpg?t=st=1729387510~exp=1729391110~hmac=347b22f6cbcd1d4d2b58a1b5d8414c7189a99f507402fc9f7065c5f600c226f6&w=900",
-      "https://img.freepik.com/free-photo/laptop-with-blank-white-screen-books-eyeglasses-pencil-holders-paperclip-wooden-desk_23-2147979131.jpg?t=st=1733972654~exp=1733976254~hmac=1d4f1571615e0d8b4fa22d5b344e7ed05fb94016b325ac49d0408a01124317c5&w=996",
+      "https://img.freepik.com/free-vector/notebook-with-social-media-icon-theme-hands-isolated-white-background_1308-44904.jpg",
+      "https://img.freepik.com/free-vector/laptop-with-education-icon-isolated_1308-48315.jpg",
+      "https://img.freepik.com/free-photo/laptop-with-blank-white-screen-books-eyeglasses-pencil-holders-paperclip-wooden-desk_23-2147979131.jpg",
     ],
     price: 49999,
     originalPrice: 54999,
@@ -106,8 +106,8 @@ const arr = [
   {
     name: "Smart Door Lock MNO",
     images: [
-      "https://img.freepik.com/free-photo/scanning-finger-coronavirus-contaminated-fingerprint-access-control_53876-95279.jpg?t=st=1729390768~exp=1729394368~hmac=0681f92aa4e41294a2f6da93d648653cbd5fa4d94f1d03485094ab7c7518820d&w=1060",
-      "https://img.freepik.com/free-photo/intercom-main-gate-residential-building_637285-1929.jpg?t=st=1733972712~exp=1733976312~hmac=0841346196dc8997ce01dfaa4747bb50c91745772328db87ac7ba2908944b853&w=360",
+      "https://img.freepik.com/free-photo/scanning-finger-coronavirus-contaminated-fingerprint-access-control_53876-95279.jpg",
+      "https://img.freepik.com/free-photo/intercom-main-gate-residential-building_637285-1929.jpg",
       "https://img.freepik.com/premium-vector/door-lock_1083548-13329.jpg?w=740",
     ],
     price: 8499,
@@ -122,9 +122,9 @@ const arr = [
   {
     name: "Gaming Chair PQR",
     images: [
-      "https://img.freepik.com/free-photo/still-life-seat-gamers_23-2149746592.jpg?t=st=1729387676~exp=1729391276~hmac=e8613355477b4a24399bbac4e229c2340e69b6795f3db8558494da9ca4f2b5db&w=360",
+      "https://img.freepik.com/free-photo/still-life-seat-gamers_23-2149746592.jpg",
       "https://img.freepik.com/premium-photo/modern-comfortable-chair-designer-isolated-white-background_985092-5961.jpg?w=740",
-      "https://img.freepik.com/free-photo/still-life-seat-gamers_23-2149746572.jpg?t=st=1729387733~exp=1729391333~hmac=65344dfd94f3ce70ec5c099bcef9bc56d159084642ef2757eb9360d2663bc49f&w=360",
+      "https://img.freepik.com/free-photo/still-life-seat-gamers_23-2149746572.jpg",
     ],
     price: 10999,
     originalPrice: 12999,
@@ -143,9 +143,9 @@ const arr = [
   {
     name: "Blender STU",
     images: [
-      "https://img.freepik.com/free-vector/flat-smoothies-blender-glass-illustration_23-2148948634.jpg?t=st=1729387954~exp=1729391554~hmac=825d207c781892e326c8e1b4083883e8f0009a64605ce23d7952fa92a0023a5a&w=740",
-      "https://img.freepik.com/free-vector/realistic-smoothies-blender-glass-illustration_52683-62066.jpg?t=st=1733972826~exp=1733976426~hmac=9bea0460914d8cf8a50c2b1e375a15b0dc78b4e3fa4944955d15b9afec3840d7&w=740",
-      "https://img.freepik.com/free-vector/flat-smoothies-blender-glass-illustration_23-2148956218.jpg?t=st=1729388757~exp=1729392357~hmac=8f215260bd23a35aaa743596136738b3a2ef0d8ae71418c56b1a20cb84058093&w=740",
+      "https://img.freepik.com/free-vector/flat-smoothies-blender-glass-illustration_23-2148948634.jpg",
+      "https://img.freepik.com/free-vector/realistic-smoothies-blender-glass-illustration_52683-62066.jpg",
+      "https://img.freepik.com/free-vector/flat-smoothies-blender-glass-illustration_23-2148956218.jpg",
     ],
     price: 2199,
     originalPrice: 2999,
@@ -161,7 +161,7 @@ const arr = [
     images: [
       "https://img.freepik.com/free-photo/young-woman-using-home-technology_23-2149216656.jpg",
       "https://img.freepik.com/free-vector/realistic-digital-air-purifier-floor-cozy-room-vector-illustration_1284-70561.jpg",
-      "https://img.freepik.com/free-vector/modern-air-purifier-removing-dust-cleaning-air-living-room-sofa-realistic-vector-illustration_1284-68359.jpg?t=st=1733972886~exp=1733976486~hmac=6c2ddaecc12ace7adaadcb2fbabc8c95f3ef7a7644f83535252cb108dec19066&w=826",
+      "https://img.freepik.com/free-vector/modern-air-purifier-removing-dust-cleaning-air-living-room-sofa-realistic-vector-illustration_1284-68359.jpg",
     ],
     price: 9999,
     originalPrice: 12499,
@@ -179,9 +179,9 @@ const arr = [
   {
     name: "Coffee Maker XYZ",
     images: [
-      "https://img.freepik.com/free-vector/cooking-utensils_24911-45039.jpg?t=st=1733972961~exp=1733976561~hmac=fbdde2003940bdac0f6cf0dc941f5a64c2a8054e6bc647e700107392debb748d&w=740",
-      "https://img.freepik.com/free-photo/view-process-making-pressed-coffee_23-2149709946.jpg?t=st=1729391256~exp=1729394856~hmac=63bb7d7fbe711a74efbc35afc214dc1cc6ce3b341b31fdf2f82c6b2b8f878d78&w=360",
-      "https://img.freepik.com/free-photo/view-coffee-making-machine_23-2150698665.jpg?t=st=1729389234~exp=1729392834~hmac=abc841325a5ed0b442a2b50d61c03b177d9a970e6361aef9d30338c062e51c4e&w=1060",
+      "https://img.freepik.com/free-vector/cooking-utensils_24911-45039.jpg",
+      "https://img.freepik.com/free-photo/view-process-making-pressed-coffee_23-2149709946.jpg",
+      "https://img.freepik.com/free-photo/view-coffee-making-machine_23-2150698665.jpg",
     ],
     price: 4299,
     originalPrice: 5499,
@@ -199,9 +199,9 @@ const arr = [
   {
     name: "Smart Light Bulb ABC",
     images: [
-      "https://img.freepik.com/free-vector/infographics-with-light-bulb-flat-design_23-2147790217.jpg?t=st=1733973041~exp=1733976641~hmac=6b18437dfdcf9d69e0c8583e2825f37d9b33833bcbd8806c05a638daebbbe6fe&w=740",
-      "https://img.freepik.com/free-vector/letter-l-lightbulb_1308-84273.jpg?t=st=1733973015~exp=1733976615~hmac=610a48ab969c14cef75f569d001ba7bf6721167d3725e169a3a8cb367ab3baa6&w=740",
-      "https://img.freepik.com/free-vector/glowing-light-bulb-infographic_23-2147505352.jpg?t=st=1733973076~exp=1733976676~hmac=de74b23b0a7608c518066faf643e813656b1592d6da4ca1b0ba45722b3d3d8ce&w=740",
+      "https://img.freepik.com/free-vector/infographics-with-light-bulb-flat-design_23-2147790217.jpg",
+      "https://img.freepik.com/free-vector/letter-l-lightbulb_1308-84273.jpg",
+      "https://img.freepik.com/free-vector/glowing-light-bulb-infographic_23-2147505352.jpg",
     ],
     price: 899,
     originalPrice: 1199,
@@ -220,9 +220,9 @@ const arr = [
   {
     name: "Electric Kettle DEF",
     images: [
-      "https://img.freepik.com/free-photo/close-up-air-fryer_23-2151723487.jpg?t=st=1729389458~exp=1729393058~hmac=2d59a69fd468e3f292af0034fd5ac7547e3c6e2dce90efd9d9bd71bb30007c16&w=360",
-      "https://img.freepik.com/free-photo/close-up-air-fryer_23-2151723471.jpg?t=st=1729389497~exp=1729393097~hmac=d34e10135648ec9d6984320b19eda77ce1bbdbeeb96962dd0136271d42eebd4d&w=360",
-      "https://img.freepik.com/free-photo/coffee-cup-green-garden_1150-14525.jpg?t=st=1733973142~exp=1733976742~hmac=6ca2be1ba5f3bfadeaaf4d72699fbdbd02bb96678aebd3747e088611b742beaf&w=996",
+      "https://img.freepik.com/free-photo/close-up-air-fryer_23-2151723487.jpg",
+      "https://img.freepik.com/free-photo/close-up-air-fryer_23-2151723471.jpg",
+      "https://img.freepik.com/free-photo/coffee-cup-green-garden_1150-14525.jpg",
     ],
     price: 1499,
     originalPrice: 1999,
@@ -240,9 +240,9 @@ const arr = [
   {
     name: "Fitness Tracker GHI",
     images: [
-      "https://img.freepik.com/free-vector/flat-design-apps-fitness-tracker-man-running_23-2148527078.jpg?t=st=1733973191~exp=1733976791~hmac=daa3ddcb10ccf1dc1fc3db347311077045824117119d3824bbaa0984f46bcb42&w=740",
-      "https://img.freepik.com/free-vector/smartwatch-concept-illustration_114360-4306.jpg?t=st=1733973207~exp=1733976807~hmac=f68b235fd05a76c9a7343d133926309e937cfae7588c87352c110e05f9478c9b&w=740",
-      "https://img.freepik.com/free-vector/fitness-trackers-flat-design_23-2148542402.jpg?t=st=1733973226~exp=1733976826~hmac=91b34e91e0a3994cee9e93f53747d074840db709a573d2b467efcdebae90a8f6&w=740",
+      "https://img.freepik.com/free-vector/flat-design-apps-fitness-tracker-man-running_23-2148527078.jpg",
+      "https://img.freepik.com/free-vector/smartwatch-concept-illustration_114360-4306.jpg",
+      "https://img.freepik.com/free-vector/fitness-trackers-flat-design_23-2148542402.jpg",
     ],
     price: 2499,
     originalPrice: 3199,
@@ -256,9 +256,9 @@ const arr = [
   {
     name: "Wireless Mouse JKL",
     images: [
-      "https://img.freepik.com/free-photo/red-computer-mouse_1260-13.jpg?t=st=1733973271~exp=1733976871~hmac=08e63dd8fd76ad9e95c89e55d661666b24acc933df2839311b198b31c5bdb55b&w=996",
-      "https://img.freepik.com/free-photo/purple-computer-mouse_1260-11.jpg?t=st=1733973291~exp=1733976891~hmac=d129896b60c8088dff7c0b4e8ca3f45ee0c1bddf75057d5efbd2d34f9339d96b&w=996",
-      "https://img.freepik.com/free-vector/mouse_24908-54360.jpg?t=st=1733973305~exp=1733976905~hmac=ccfca98e9d6c7be184e4de67b11d323588b16a2585723c47e9d60044c527244b&w=740",
+      "https://img.freepik.com/free-photo/red-computer-mouse_1260-13.jpg",
+      "https://img.freepik.com/free-photo/purple-computer-mouse_1260-11.jpg",
+      "https://img.freepik.com/free-vector/mouse_24908-54360.jpg",
     ],
     price: 799,
     originalPrice: 999,
@@ -272,9 +272,9 @@ const arr = [
   {
     name: "Digital Camera MNO",
     images: [
-      "https://img.freepik.com/free-photo/photo-camera-still-life_23-2150630950.jpg?t=st=1733973362~exp=1733976962~hmac=1e0cc3efcbdac84026a84cbece5729a12bc500b2bc3fb9a0d48bf8def2066e20&w=996",
-      "https://img.freepik.com/free-photo/mid-section-woman-holding-digital-camera_107420-96191.jpg?t=st=1733973389~exp=1733976989~hmac=7f5e6e919717c68645451798455b66c25754e365fdb03b82f253b32c48533410&w=996",
-      "https://img.freepik.com/free-photo/mid-section-woman-holding-digital-camera_107420-96191.jpg?t=st=1733973389~exp=1733976989~hmac=7f5e6e919717c68645451798455b66c25754e365fdb03b82f253b32c48533410&w=996",
+      "https://img.freepik.com/free-photo/photo-camera-still-life_23-2150630950.jpg",
+      "https://img.freepik.com/free-photo/mid-section-woman-holding-digital-camera_107420-96191.jpg",
+      "https://img.freepik.com/free-photo/mid-section-woman-holding-digital-camera_107420-96191.jpg",
     ],
     price: 22999,
     originalPrice: 26999,
@@ -292,9 +292,9 @@ const arr = [
   {
     name: "Noise-Cancelling Earbuds PQR",
     images: [
-      "https://img.freepik.com/free-photo/blonde-girl-blue-sweatshirt-taking-out-headphones-hear-people-around_114579-27191.jpg?t=st=1733973465~exp=1733977065~hmac=970ca675711420e13875e5455a6062201421e247730a64f1fbc7428910c56449&w=996",
-      "https://img.freepik.com/free-photo/blonde-girl-blue-sweatshirt-wearing-headphones-enjoying-music-having-fun_114579-27195.jpg?t=st=1733973585~exp=1733977185~hmac=699bc467bc5f30aaa964bb60327c8c8d58afaaf6bd6cb100f10baae37f89d9f6&w=996",
-      "https://img.freepik.com/free-photo/blonde-girl-blue-sweatshirt-wearing-headphones-trying-understand-music_114579-27232.jpg?t=st=1733973543~exp=1733977143~hmac=ef4fc9c68db9f32212a64a355cadcd2d1c221f3482187ddde0ba9e1c637a297d&w=996",
+      "https://img.freepik.com/free-photo/blonde-girl-blue-sweatshirt-taking-out-headphones-hear-people-around_114579-27191.jpg",
+      "https://img.freepik.com/free-photo/blonde-girl-blue-sweatshirt-wearing-headphones-enjoying-music-having-fun_114579-27195.jpg",
+      "https://img.freepik.com/free-photo/blonde-girl-blue-sweatshirt-wearing-headphones-trying-understand-music_114579-27232.jpg",
     ],
     price: 5499,
     originalPrice: 6999,
@@ -313,9 +313,9 @@ const arr = [
   {
     name: "Smartphone XYZ",
     images: [
-      "https://img.freepik.com/free-photo/smartphones-city-concept_23-2150246080.jpg?t=st=1733973643~exp=1733977243~hmac=a02b16ee0b1d51e6f554bac83702eeedd7e5e5f8d10f45462dfa73d5c1c6873d&w=360",
-      "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437107.jpg?t=st=1733973655~exp=1733977255~hmac=c1888b8ef9d244ff42fbde10f61d797e34e15503875e8289fe62c45217f8c56a&w=996",
-      "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437084.jpg?t=st=1733973675~exp=1733977275~hmac=3f247def5ddaa136bd1114db39cf0733a5ca92cc37c832fd52accdde24a1e315&w=1380",
+      "https://img.freepik.com/free-photo/smartphones-city-concept_23-2150246080.jpg",
+      "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437107.jpg",
+      "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437084.jpg",
     ],
     price: 14999,
     originalPrice: 19999,
@@ -333,9 +333,9 @@ const arr = [
   {
     name: "Bluetooth Headphones ABC",
     images: [
-      "https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072207.jpg?t=st=1729390418~exp=1729394018~hmac=371b34c51cfcaf9deaa3216a13afeb605992557699332a6b304d53cc411d2476&w=360",
-      "https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072239.jpg?t=st=1729390450~exp=1729394050~hmac=17d9ef4a56ff4ac7a91088c7f02a5095c7b863bd9398ed52176308f2c5fe62c7&w=360",
-      "https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072237.jpg?t=st=1729390471~exp=1729394071~hmac=b161ee16316aea4e5356893a4459604ebd500ef506f6feaca5931598bc2eabba&w=360",
+      "https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072207.jpg",
+      "https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072239.jpg",
+      "https://img.freepik.com/free-photo/still-life-wireless-cyberpunk-headphones_23-2151072237.jpg",
     ],
     price: 1999,
     originalPrice: 2499,
@@ -354,9 +354,9 @@ const arr = [
   {
     name: "Smart TV DEF",
     images: [
-      "https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg?t=st=1729390511~exp=1729394111~hmac=e3191671df3a448b4f7e04ec3d7ddf8e6e5ad44157bcce831a758a8960535702&w=1060",
+      "https://img.freepik.com/free-photo/television-houseplants-room-scene-generative-ai_188544-12145.jpg",
       "https://img.freepik.com/free-psd/modern-tv-isolated_23-2151430326.jpg",
-      "https://img.freepik.com/free-photo/landscape-nature-scene-tv-appliance-generative-ai_188544-12122.jpg?t=st=1729390549~exp=1729394149~hmac=c9b476810ce8d7fe5e09cfa0c1959148fed6214b44c419e2848925e35c13caf7&w=1060",
+      "https://img.freepik.com/free-photo/landscape-nature-scene-tv-appliance-generative-ai_188544-12122.jpg",
     ],
     price: 24999,
     originalPrice: 29999,
@@ -375,8 +375,8 @@ const arr = [
     name: "Smartwatch GHI",
     images: [
       "https://img.freepik.com/free-photo/smartwatch-with-digital-assistant-arrangement_23-2149108009.jpg",
-      "https://img.freepik.com/free-photo/active-woman-using-digital-device_53876-30638.jpg?t=st=1733973786~exp=1733977386~hmac=ffef560bd9d435ad5e24f40f0916b42d6fb1242e89207d4b7d2396ecbf979e34&w=740",
-      "https://img.freepik.com/free-photo/technology-woman-checking-her-watch_144627-26201.jpg?t=st=1733973806~exp=1733977406~hmac=8517afede128ca8d385f152cb422ac67e8796b5be34b2d77cbacc22e87154289&w=996",
+      "https://img.freepik.com/free-photo/active-woman-using-digital-device_53876-30638.jpg",
+      "https://img.freepik.com/free-photo/technology-woman-checking-her-watch_144627-26201.jpg",
     ],
     price: 4499,
     originalPrice: 5999,
@@ -389,9 +389,9 @@ const arr = [
   {
     name: "Laptop JKL",
     images: [
-      "https://img.freepik.com/free-photo/business-woman-presenting-laptop_23-2147626302.jpg?t=st=1733973858~exp=1733977458~hmac=31c177c6135aa2bb8a0a5a1d80ceb624867d4d99d96fc2e72fc21e9e5cb40096&w=996",
-      "https://img.freepik.com/free-photo/good-looking-business-woman-showing-laptop_23-2147626308.jpg?t=st=1733973879~exp=1733977479~hmac=58a4c2a3f141875aab203a283959d3395c08f2dcd3a308f0005914180fd1e375&w=996",
-      "https://img.freepik.com/free-psd/modern-businesswoman-presenting-laptop_23-2147632417.jpg?t=st=1733973895~exp=1733977495~hmac=7a9a79bb35d60d5e78da2840eca5679f7818a4eb753f20400578325fcdc8c189&w=996",
+      "https://img.freepik.com/free-photo/business-woman-presenting-laptop_23-2147626302.jpg",
+      "https://img.freepik.com/free-photo/good-looking-business-woman-showing-laptop_23-2147626308.jpg",
+      "https://img.freepik.com/free-psd/modern-businesswoman-presenting-laptop_23-2147632417.jpg",
     ],
     price: 49999,
     originalPrice: 54999,
@@ -410,9 +410,9 @@ const arr = [
   {
     name: "Smart Door Lock MNO",
     images: [
-      "https://img.freepik.com/free-photo/scanning-finger-coronavirus-contaminated-fingerprint-access-control_53876-95279.jpg?t=st=1729390768~exp=1729394368~hmac=0681f92aa4e41294a2f6da93d648653cbd5fa4d94f1d03485094ab7c7518820d&w=1060",
-      "https://img.freepik.com/free-photo/smart-home-tablet-wall_23-2149036895.jpg?t=st=1733973951~exp=1733977551~hmac=0fd5ef5d0b10895f05f1786d7b4fbcd79dcacc8519a8f40000325e581decb3a3&w=996",
-      "https://img.freepik.com/free-photo/man-using-tablet-his-smart-home_23-2149036902.jpg?t=st=1733973967~exp=1733977567~hmac=8ab8b94f378b94d3f190fddb055c25ae5356a1282603dea0215d82819df84d70&w=996",
+      "https://img.freepik.com/free-photo/scanning-finger-coronavirus-contaminated-fingerprint-access-control_53876-95279.jpg",
+      "https://img.freepik.com/free-photo/smart-home-tablet-wall_23-2149036895.jpg",
+      "https://img.freepik.com/free-photo/man-using-tablet-his-smart-home_23-2149036902.jpg",
     ],
     price: 8499,
     originalPrice: 9999,
@@ -425,9 +425,9 @@ const arr = [
   {
     name: "Gaming Chair PSR",
     images: [
-      "https://img.freepik.com/free-photo/still-life-seat-gamers_23-2149746585.jpg?t=st=1733974028~exp=1733977628~hmac=ffeb3d022fa7a3ebc462fb04c81ea71fd01d399fce39627a4c8bd25cda066127&w=996",
-      "https://img.freepik.com/free-photo/gaming-setup-with-neon-light_23-2149829125.jpg?t=st=1729390890~exp=1729394490~hmac=fc48558983adb214a3dfa855190ba5e921608b8a8635461f3be5a59e37961a55&w=360",
-      "https://img.freepik.com/free-photo/high-angle-gaming-controller-chair_23-2149829127.jpg?t=st=1733451300~exp=1733454900~hmac=ca62411a1e6415a78704b2bd2d29c8ef060addf13cd29fe6bb74d60634716717&w=360",
+      "https://img.freepik.com/free-photo/still-life-seat-gamers_23-2149746585.jpg",
+      "https://img.freepik.com/free-photo/gaming-setup-with-neon-light_23-2149829125.jpg",
+      "https://img.freepik.com/free-photo/high-angle-gaming-controller-chair_23-2149829127.jpg",
     ],
     price: 11999,
     originalPrice: 12999,
@@ -445,9 +445,9 @@ const arr = [
   {
     name: "Blender STU",
     images: [
-      "https://img.freepik.com/free-photo/smiling-young-woman-preparing-paper-pulp-blender_23-2147845499.jpg?t=st=1733974112~exp=1733977712~hmac=dcb3d0d78b3373d2b9ba20d5344c651198d25a94e061ac8abf2105e556d47263&w=360",
-      "https://img.freepik.com/free-photo/woman-s-hand-grinding-paper-mixer-grinder_23-2147846089.jpg?t=st=1733974130~exp=1733977730~hmac=622d4eaafadf708ca217f3e05d38d9ac552bfd2f61bfadc0c152fb96040608b0&w=740",
-      "https://img.freepik.com/free-photo/midsection-view-woman-s-hand-putting-pieces-paper-blender_23-2147845548.jpg?t=st=1733974142~exp=1733977742~hmac=62b2b2d84eddad6fc951e0ec372d59ca271dac8348ee00437fadb798a3d55f97&w=826",
+      "https://img.freepik.com/free-photo/smiling-young-woman-preparing-paper-pulp-blender_23-2147845499.jpg",
+      "https://img.freepik.com/free-photo/woman-s-hand-grinding-paper-mixer-grinder_23-2147846089.jpg",
+      "https://img.freepik.com/free-photo/midsection-view-woman-s-hand-putting-pieces-paper-blender_23-2147845548.jpg",
     ],
     price: 2199,
     originalPrice: 2999,
@@ -462,7 +462,7 @@ const arr = [
     images: [
       "https://img.freepik.com/free-photo/young-woman-using-home-technology_23-2149216656.jpg",
       "https://img.freepik.com/free-vector/realistic-digital-air-purifier-floor-cozy-room-vector-illustration_1284-70561.jpg",
-      "https://img.freepik.com/free-photo/managing-smart-speakers-concept_23-2150170083.jpg?t=st=1733974180~exp=1733977780~hmac=4370d83fbb6b6ab2180629e47b6e9d1e29784c29d4a4bf9293ccd34c0d705550&w=360",
+      "https://img.freepik.com/free-photo/managing-smart-speakers-concept_23-2150170083.jpg",
     ],
     price: 9999,
     originalPrice: 12499,
@@ -479,9 +479,9 @@ const arr = [
   {
     name: "Coffee Maker XYZ",
     images: [
-      "https://img.freepik.com/free-photo/view-process-making-pressed-coffee_23-2149709947.jpg?t=st=1729391231~exp=1729394831~hmac=96c2c91956a415080c8f171663d2f0d86821c8212d3b5f750b1c0fb529adbf3e&w=360",
-      "https://img.freepik.com/free-photo/view-process-making-pressed-coffee_23-2149709946.jpg?t=st=1729391256~exp=1729394856~hmac=63bb7d7fbe711a74efbc35afc214dc1cc6ce3b341b31fdf2f82c6b2b8f878d78&w=360",
-      "https://img.freepik.com/free-photo/tool-used-coffee-machine-coffee-making-process_23-2150187520.jpg?t=st=1729391272~exp=1729394872~hmac=c5ccb90c4deb30ef0a26e5279f7886b7021805ff1987343651acf5ca9852fc7e&w=360",
+      "https://img.freepik.com/free-photo/view-process-making-pressed-coffee_23-2149709947.jpg",
+      "https://img.freepik.com/free-photo/view-process-making-pressed-coffee_23-2149709946.jpg",
+      "https://img.freepik.com/free-photo/tool-used-coffee-machine-coffee-making-process_23-2150187520.jpg",
     ],
     price: 4299,
     originalPrice: 5499,
@@ -498,9 +498,9 @@ const arr = [
   {
     name: "Smart Light Bulb ABC",
     images: [
-      "https://img.freepik.com/free-photo/bulb-with-color-floating-inside_1112-282.jpg?t=st=1729391300~exp=1729394900~hmac=1668d5b8072f1170ff870202f408cbec5ca2dda3824e96e8f53585a6da3041f8&w=740",
-      "https://img.freepik.com/free-photo/bulb-turned-off_1112-283.jpg?t=st=1729391315~exp=1729394915~hmac=088e554fc39113e485d676e13757eda5fd5431f53bcca8335848582ac97fce1a&w=360",
-      "https://img.freepik.com/free-photo/bulb-with-colored-ink-inside_1112-156.jpg?t=st=1729391330~exp=1729394930~hmac=e94fa2904e888f20bf6e559058d047d571129330210759cc36720573ef76647c&w=360",
+      "https://img.freepik.com/free-photo/bulb-with-color-floating-inside_1112-282.jpg",
+      "https://img.freepik.com/free-photo/bulb-turned-off_1112-283.jpg",
+      "https://img.freepik.com/free-photo/bulb-with-colored-ink-inside_1112-156.jpg",
     ],
     price: 899,
     originalPrice: 1199,
@@ -518,9 +518,9 @@ const arr = [
   {
     name: "Electric Kettle DEF",
     images: [
-      "https://img.freepik.com/free-photo/side-view-female-barista-grinding-coffee-beans_23-2148824471.jpg?t=st=1733974298~exp=1733977898~hmac=5d8ae08aa28a617e2295c8e5b2aa7415602934a25423a8dd5b40f5da522d6536&w=996",
-      "https://img.freepik.com/free-photo/male-barista-with-medical-mask-pouring-water-kettle_23-2148824379.jpg?t=st=1729391387~exp=1729394987~hmac=62c176d0804c9b84c2c04710cc756cd5406d97372b85f41ebdec62167c130d91&w=1060",
-      "https://img.freepik.com/free-photo/front-view-male-barista-holding-kettle_23-2148824411.jpg?t=st=1733974334~exp=1733977934~hmac=2b48e7a9f049f1ad70c14b34ac668b37d948f0937edf441921c345461de4622e&w=996",
+      "https://img.freepik.com/free-photo/side-view-female-barista-grinding-coffee-beans_23-2148824471.jpg",
+      "https://img.freepik.com/free-photo/male-barista-with-medical-mask-pouring-water-kettle_23-2148824379.jpg",
+      "https://img.freepik.com/free-photo/front-view-male-barista-holding-kettle_23-2148824411.jpg",
     ],
     price: 1499,
     originalPrice: 1999,
@@ -537,9 +537,9 @@ const arr = [
   {
     name: "Fitness Tracker GHI",
     images: [
-      "https://img.freepik.com/free-photo/young-woman-exercising-outdoor-what-i-need-while-jogging-is-good-music_329181-11177.jpg?t=st=1729391451~exp=1729395051~hmac=0513913b7bcb1948c7e702abc6104fe5f54a133fb80775489e721c10dfd577d6&w=360",
-      "https://img.freepik.com/free-photo/young-woman-exercising-outdoor-woman-preparing-her-everyday-training_329181-11147.jpg?t=st=1729391517~exp=1729395117~hmac=26205fad5a5490f1f95ada042c3200effe44e2da735f6b0c2434f68db543fe3d&w=360",
-      "https://img.freepik.com/free-photo/portrait-concentrated-young-fitness-woman-sportswear_171337-10062.jpg?t=st=1729391534~exp=1729395134~hmac=635163cd38c3482e32823c60272043abe35c3f2f172bed1de4be735f8e16edea&w=360",
+      "https://img.freepik.com/free-photo/young-woman-exercising-outdoor-what-i-need-while-jogging-is-good-music_329181-11177.jpg",
+      "https://img.freepik.com/free-photo/young-woman-exercising-outdoor-woman-preparing-her-everyday-training_329181-11147.jpg",
+      "https://img.freepik.com/free-photo/portrait-concentrated-young-fitness-woman-sportswear_171337-10062.jpg",
     ],
     price: 2499,
     originalPrice: 3199,
@@ -552,9 +552,9 @@ const arr = [
   {
     name: "Wireless Mouse JKL",
     images: [
-      "https://img.freepik.com/free-photo/mouse-with-dripping-pink-paint_23-2148263684.jpg?t=st=1733974392~exp=1733977992~hmac=2232a901eb631ea62ebc45acc4854f9467cecaee0111d1bf9c018f488b797fef&w=996",
-      "https://img.freepik.com/free-photo/top-view-blue-computer-mouse-with-yellow-background_23-2148226814.jpg?t=st=1733974416~exp=1733978016~hmac=3632d06626e92686785eff1cacab9e76ff6f8593e785c8761962ad052e209ca0&w=996",
-      "https://img.freepik.com/free-photo/flat-lay-desk-concept-with-copy-space_23-2148226932.jpg?t=st=1733974432~exp=1733978032~hmac=0640ec5d2a8dc9137a89ad37fa2a030b4a4f38e0979e655382855fbbbae6afbd&w=996",
+      "https://img.freepik.com/free-photo/mouse-with-dripping-pink-paint_23-2148263684.jpg",
+      "https://img.freepik.com/free-photo/top-view-blue-computer-mouse-with-yellow-background_23-2148226814.jpg",
+      "https://img.freepik.com/free-photo/flat-lay-desk-concept-with-copy-space_23-2148226932.jpg",
     ],
     price: 799,
     originalPrice: 999,
@@ -567,9 +567,9 @@ const arr = [
   {
     name: "Digital Camera MNO",
     images: [
-      "https://img.freepik.com/free-photo/artificial-black-camera-blue-background_23-2148188202.jpg?t=st=1733974469~exp=1733978069~hmac=9b39f83dc55662f88443c0915575acbdd0378cc680fdd7ecb45e2910d010db5c&w=996",
-      "https://img.freepik.com/free-photo/front-view-photographer-with-camera_23-2150630630.jpg?t=st=1729393985~exp=1729397585~hmac=3b57554c69973bfd02e536ff76cc314200c6df69200b105102c0c03f7b045eec&w=360",
-      "https://img.freepik.com/free-photo/photo-camera-still-life_23-2150630950.jpg?t=st=1733974488~exp=1733978088~hmac=e63270aa204e0c50bbd3b7636442e26e30f3b0a02c9a6aa0ebc8766dce957bef&w=996",
+      "https://img.freepik.com/free-photo/artificial-black-camera-blue-background_23-2148188202.jpg",
+      "https://img.freepik.com/free-photo/front-view-photographer-with-camera_23-2150630630.jpg",
+      "https://img.freepik.com/free-photo/photo-camera-still-life_23-2150630950.jpg",
     ],
     price: 22999,
     originalPrice: 26999,
@@ -586,9 +586,9 @@ const arr = [
   {
     name: "Noise-Cancelling Earbuds PQR",
     images: [
-      "https://img.freepik.com/free-photo/vertical-shot-tired-sportswoman-has-pain-neck-keeps-eyes-closed-has-combed-curly-hair-dressed-beige-activewear-wears-stereo-headphones-ears-listens-music-poses-outdoors-stadium_273609-62228.jpg?t=st=1733974555~exp=1733978155~hmac=fafd6e635059539d7a113926b7a2866f986cc262b000d74a43913059d960019e&w=360",
-      "https://img.freepik.com/free-photo/woman-has-sweat-after-intensive-cardio-training-takes-break-drinks-refreshing-water-from-bottle-dressed-sportswear-listens-motivational-music_273609-55216.jpg?t=st=1733974587~exp=1733978187~hmac=1821ed84ab655b73384e487fc53a8fb970b69fb1dc25852d53d0caa3937012bf&w=996",
-      "https://img.freepik.com/free-photo/sporty-thoughtful-woman-with-curly-hair-listens-audio-track-wireless-headphones-touches-neck-concentrated-down-takes-break-after-workout_273609-55587.jpg?t=st=1733974603~exp=1733978203~hmac=5097d3f95d0a900d205c99a5c609df48e441e47aac9d9386494950bbb8a76c60&w=996",
+      "https://img.freepik.com/free-photo/vertical-shot-tired-sportswoman-has-pain-neck-keeps-eyes-closed-has-combed-curly-hair-dressed-beige-activewear-wears-stereo-headphones-ears-listens-music-poses-outdoors-stadium_273609-62228.jpg",
+      "https://img.freepik.com/free-photo/woman-has-sweat-after-intensive-cardio-training-takes-break-drinks-refreshing-water-from-bottle-dressed-sportswear-listens-motivational-music_273609-55216.jpg",
+      "https://img.freepik.com/free-photo/sporty-thoughtful-woman-with-curly-hair-listens-audio-track-wireless-headphones-touches-neck-concentrated-down-takes-break-after-workout_273609-55587.jpg",
     ],
     price: 5499,
     originalPrice: 6999,
@@ -606,9 +606,9 @@ const arr = [
   {
     name: "Vacuum Cleaner STU",
     images: [
-      "https://img.freepik.com/free-photo/man-servant-doing-chores-around-house_23-2149508160.jpg?t=st=1729394147~exp=1729397747~hmac=fb7b1a4b3fb14f1d7ef7fef587847e8cbe5b935009851540c8e883df02f5a2da&w=900",
-      "https://img.freepik.com/free-photo/man-doing-professional-home-cleaning-service_23-2150358990.jpg?t=st=1729394181~exp=1729397781~hmac=8731423d670ccf92949a4cb0b6fff66766a01ac081d4b1680ea63b0f92065363&w=360",
-      "https://img.freepik.com/free-photo/man-doing-professional-home-cleaning-service_23-2150358991.jpg?t=st=1729394247~exp=1729397847~hmac=4dcbd6c6140d85c089d9fcd6739cfd65be481f288395c284f436cae776ccafba&w=360",
+      "https://img.freepik.com/free-photo/man-servant-doing-chores-around-house_23-2149508160.jpg",
+      "https://img.freepik.com/free-photo/man-doing-professional-home-cleaning-service_23-2150358990.jpg",
+      "https://img.freepik.com/free-photo/man-doing-professional-home-cleaning-service_23-2150358991.jpg",
     ],
     price: 6999,
     originalPrice: 8999,
@@ -621,9 +621,9 @@ const arr = [
   {
     name: "Water Purifier GHI",
     images: [
-      "https://img.freepik.com/free-vector/smart-fridge-gas-oven-hood-kitchen-appliances_107791-2971.jpg?t=st=1733974975~exp=1733978575~hmac=80be48bf53ef73349554f3be2285062e8751bab27a0bf52a2d6dc83c801600e5&w=740",
-      "https://img.freepik.com/free-vector/cartoon-water-filter_1284-71880.jpg?t=st=1733975056~exp=1733978656~hmac=67d35dca944dc15efd0bf12cae40eaef9b33f68db7dadcd15f7409db669fb936&w=740",
-      "https://img.freepik.com/free-vector/dishwasher-machine-realistic-set-three-isolated-images-with-different-views-dish-washing-machine-vector-illustration_1284-67999.jpg?t=st=1733975098~exp=1733978698~hmac=4ae71136f0ca28fa4edace74d0787ffe41e0f74e735468350cf945a4d956844a&w=1060",
+      "https://img.freepik.com/free-vector/smart-fridge-gas-oven-hood-kitchen-appliances_107791-2971.jpg",
+      "https://img.freepik.com/free-vector/cartoon-water-filter_1284-71880.jpg",
+      "https://img.freepik.com/free-vector/dishwasher-machine-realistic-set-three-isolated-images-with-different-views-dish-washing-machine-vector-illustration_1284-67999.jpg",
     ],
     price: 12999,
     originalPrice: 15999,
@@ -636,9 +636,9 @@ const arr = [
   {
     name: "Smart Thermostat ABC",
     images: [
-      "https://img.freepik.com/free-photo/full-shot-smiley-woman-pushing-heater-s-red-button_23-2149395837.jpg?t=st=1729394436~exp=1729398036~hmac=cda3557d09454f8cb57b860fef74f43da1af54139b645ce99e77dbb542028c07&w=360",
-      "https://img.freepik.com/free-photo/close-up-finger-using-vitroceramic-app_23-2148994136.jpg?t=st=1733975219~exp=1733978819~hmac=bbfe5b9b591bd3486645d5b9ad6a7fd34395d24705fac23a870c57198c2f1752&w=996",
-      "https://img.freepik.com/free-photo/young-woman-using-home-technology_23-2149216635.jpg?t=st=1733975272~exp=1733978872~hmac=1f32aaceef8f3b994a702c2160e86be96a5652977a325ce1b91d5b9ddc8c30f8&w=996",
+      "https://img.freepik.com/free-photo/full-shot-smiley-woman-pushing-heater-s-red-button_23-2149395837.jpg",
+      "https://img.freepik.com/free-photo/close-up-finger-using-vitroceramic-app_23-2148994136.jpg",
+      "https://img.freepik.com/free-photo/young-woman-using-home-technology_23-2149216635.jpg",
     ],
     price: 9999,
     originalPrice: 12999,
@@ -651,9 +651,9 @@ const arr = [
   {
     name: "Electric Toothbrush DEF",
     images: [
-      "https://img.freepik.com/free-vector/electric-toothbush-poster_1284-21537.jpg?t=st=1733975324~exp=1733978924~hmac=33ff37da396edd74900fdbf2f7822d9a4012bb9f55d94a48db6b626f55b46968&w=1060",
-      "https://img.freepik.com/free-vector/dental-banners-set-healthy-teeth_1284-32621.jpg?t=st=1733975349~exp=1733978949~hmac=80457ba64b0a76ab9ecfb521852249ddaa2453e8703884f4dfa9c276f600ff77&w=996",
-      "https://img.freepik.com/free-vector/realistic-dental-care-brush_23-2149004605.jpg?t=st=1733975368~exp=1733978968~hmac=a24377506923b04c50710b90b589e38ded099b976f2e19036b3e727f1cee8166&w=740",
+      "https://img.freepik.com/free-vector/electric-toothbush-poster_1284-21537.jpg",
+      "https://img.freepik.com/free-vector/dental-banners-set-healthy-teeth_1284-32621.jpg",
+      "https://img.freepik.com/free-vector/realistic-dental-care-brush_23-2149004605.jpg",
     ],
     price: 2499,
     originalPrice: 2999,
@@ -666,9 +666,9 @@ const arr = [
   {
     name: "Hair Dryer GHI",
     images: [
-      "https://img.freepik.com/free-photo/portrait-smiling-young-woman-dries-her-hair-gray_231208-1652.jpg?t=st=1733975416~exp=1733979016~hmac=7ed17be81679bddb042732aaf469c8b60261c5fc666b244b2682ab25595d9225&w=996",
-      "https://img.freepik.com/free-photo/young-pretty-woman-holding-hair-dryer-straightening-isolated-white_231208-1636.jpg?t=st=1733975433~exp=1733979033~hmac=283a50fa7e279abdfb5833a121b140fcbcecdf3d44ad881de42efdc25588134e&w=996",
-      "https://img.freepik.com/free-photo/young-woman-drying-long-hair-with-electric-fan-isolated-white_231208-1661.jpg?t=st=1733975447~exp=1733979047~hmac=7dd8ce4ea98c7de60abf0807c22b36770ffdb37052f84c3f30f5252661842528&w=996",
+      "https://img.freepik.com/free-photo/portrait-smiling-young-woman-dries-her-hair-gray_231208-1652.jpg",
+      "https://img.freepik.com/free-photo/young-pretty-woman-holding-hair-dryer-straightening-isolated-white_231208-1636.jpg",
+      "https://img.freepik.com/free-photo/young-woman-drying-long-hair-with-electric-fan-isolated-white_231208-1661.jpg",
     ],
     price: 1999,
     originalPrice: 2499,
@@ -681,9 +681,9 @@ const arr = [
   {
     name: "Smart Plug MNO",
     images: [
-      "https://img.freepik.com/free-vector/amourous-bright-love-poster-with-realistic-glowing-plugged-electric-light-bulb-heart-shape_1284-49298.jpg?t=st=1733975516~exp=1733979116~hmac=82b4848e5a3f8eb5da465d5d61a292e176e8e13d74b235bd88653b5d336f630f&w=996",
-      "https://img.freepik.com/free-vector/realistic-romantic-concept-realistic-wired-light-bulb-heart-shape-with-plug-socket-isolated_1284-49295.jpg?t=st=1733975538~exp=1733979138~hmac=c46f43b7d369765c529778f1114c6b2aa3740998b1e84a983940bf2b4b503b65&w=996",
-      "https://img.freepik.com/free-vector/realistic-wired-lamp_1284-50250.jpg?t=st=1733975556~exp=1733979156~hmac=8cbdc195497b2b7d6b1398ccb1c9aa1b50d3ae62ff2ed70397ffa4ef4fad82c9&w=996",
+      "https://img.freepik.com/free-vector/amourous-bright-love-poster-with-realistic-glowing-plugged-electric-light-bulb-heart-shape_1284-49298.jpg",
+      "https://img.freepik.com/free-vector/realistic-romantic-concept-realistic-wired-light-bulb-heart-shape-with-plug-socket-isolated_1284-49295.jpg",
+      "https://img.freepik.com/free-vector/realistic-wired-lamp_1284-50250.jpg",
     ],
     price: 1499,
     originalPrice: 1999,
@@ -696,9 +696,9 @@ const arr = [
   {
     name: "Robot Vacuum STU",
     images: [
-      "https://img.freepik.com/free-photo/still-life-robotic-vacuum_23-2151108362.jpg?t=st=1729394754~exp=1729398354~hmac=0a275ce562ddca6f9ef9b79a5c6753bc81cd6f3e0ca48d79375f03569f093386&w=360",
-      "https://img.freepik.com/free-photo/still-life-robotic-vacuum_23-2151108356.jpg?t=st=1729394772~exp=1729398372~hmac=31eced0af1e9d278e6752d371bdd49b6c727e2d6825087c1b78e606ef3ea12fd&w=996",
-      "https://img.freepik.com/free-photo/still-life-robotic-vacuum_23-2151108320.jpg?t=st=1729394787~exp=1729398387~hmac=7e3e8661322c8de264fa2fe00d19743496e795c346b028d015057dd81d12cf2b&w=360",
+      "https://img.freepik.com/free-photo/still-life-robotic-vacuum_23-2151108362.jpg",
+      "https://img.freepik.com/free-photo/still-life-robotic-vacuum_23-2151108356.jpg",
+      "https://img.freepik.com/free-photo/still-life-robotic-vacuum_23-2151108320.jpg",
     ],
     price: 24999,
     originalPrice: 29999,
@@ -711,9 +711,9 @@ const arr = [
   {
     name: "Steam Iron DEF",
     images: [
-      "https://img.freepik.com/free-photo/young-woman-ironing-clothes_144627-42934.jpg?t=st=1733975619~exp=1733979219~hmac=627b2a759a33977d2561ff6d4c0e5cefdcd5a252fc54a1432744d05537434136&w=996",
-      "https://img.freepik.com/free-photo/young-woman-ironing-clothes_144627-42933.jpg?t=st=1733975650~exp=1733979250~hmac=f5620239b74928801d48bf6ea59e8c8eb6651158f680ce400119d2545cdd491c&w=996",
-      "https://img.freepik.com/free-photo/female-smoothing-out-wrinkles-washed-shirt_259150-58948.jpg?t=st=1733975669~exp=1733979269~hmac=a264fd306cae791550d7a57ef48684152e2baebb5012f570738eb4676d6995bb&w=996",
+      "https://img.freepik.com/free-photo/young-woman-ironing-clothes_144627-42934.jpg",
+      "https://img.freepik.com/free-photo/young-woman-ironing-clothes_144627-42933.jpg",
+      "https://img.freepik.com/free-photo/female-smoothing-out-wrinkles-washed-shirt_259150-58948.jpg",
     ],
     price: 1799,
     originalPrice: 2499,
@@ -726,9 +726,9 @@ const arr = [
   {
     name: "Washing Machine PQR",
     images: [
-      "https://img.freepik.com/free-vector/washing-machine-realistic-poster-with-quiet-quick-wash-symbols-illustration_1284-29131.jpg?t=st=1733975820~exp=1733979420~hmac=b08c271f5a7d2515cad423775e5f81fe89e75d5ff9c4619bec3a11e28db3a294&w=740",
-      "https://img.freepik.com/free-photo/man-waiting-washing-machine-finish-its-program_23-2149117024.jpg?t=st=1729394918~exp=1729398518~hmac=f3a39d91c6cd7ce88b932c7c11d18f8f97b00ffd2750f74b580522b68e0c924d&w=900",
-      "https://img.freepik.com/free-photo/front-view-delighted-male-housekeeper-sitting-front-washer-laundry-basket-white-background_140725-112236.jpg?t=st=1733975790~exp=1733979390~hmac=f89a08620e554a94b18f2607b1ca851a7db63c246d6207375fd5bb017ca36f2a&w=360",
+      "https://img.freepik.com/free-vector/washing-machine-realistic-poster-with-quiet-quick-wash-symbols-illustration_1284-29131.jpg",
+      "https://img.freepik.com/free-photo/man-waiting-washing-machine-finish-its-program_23-2149117024.jpg",
+      "https://img.freepik.com/free-photo/front-view-delighted-male-housekeeper-sitting-front-washer-laundry-basket-white-background_140725-112236.jpg",
     ],
     price: 22999,
     originalPrice: 26999,
@@ -741,9 +741,9 @@ const arr = [
   {
     name: "Dishwasher ABC",
     images: [
-      "https://img.freepik.com/free-photo/front-view-young-male-with-green-basket-full-clothes-holding-bank-card-white-wall_140725-107853.jpg?t=st=1729395028~exp=1729398628~hmac=b604e9cc7f3af4e0ff11870567e99f10798bb251da0079520a51b0ea7ec94d17&w=360",
-      "https://img.freepik.com/free-photo/front-view-young-male-with-green-basket-full-clothes-holding-bank-card-white-wall_140725-107850.jpg?t=st=1729395051~exp=1729398651~hmac=846a982fc9c4675906f91a4e0131adaec3015aefa2c22797f698621d7d33b5fb&w=360",
-      "https://img.freepik.com/free-photo/front-view-young-male-washing-clothes-with-help-washing-machine-white-wall_140725-107813.jpg?t=st=1729395067~exp=1729398667~hmac=cd2fc1b75afb69fb077154f42608c8ddee3293a2679ee73bd4bf6d1745818efd&w=360",
+      "https://img.freepik.com/free-photo/front-view-young-male-with-green-basket-full-clothes-holding-bank-card-white-wall_140725-107853.jpg",
+      "https://img.freepik.com/free-photo/front-view-young-male-with-green-basket-full-clothes-holding-bank-card-white-wall_140725-107850.jpg",
+      "https://img.freepik.com/free-photo/front-view-young-male-washing-clothes-with-help-washing-machine-white-wall_140725-107813.jpg",
     ],
     price: 34999,
     originalPrice: 39999,
@@ -756,9 +756,9 @@ const arr = [
   {
     name: "Soundbar GHI",
     images: [
-      "https://img.freepik.com/free-photo/view-horizontal-bluetooth-speaker-with-simple-minimal-modern-design_23-2150807998.jpg?t=st=1729395108~exp=1729398708~hmac=8db6a91349396ea5892607c9c83d9ab0e4382acae7be146b90a7408335dad111&w=360",
-      "https://img.freepik.com/free-photo/high-angle-smart-speaker-home_23-2150171767.jpg?t=st=1729395129~exp=1729398729~hmac=094dcd528b4d035998fc5e66623b065031b69089e0c50bf831c9a1601d7964e2&w=900",
-      "https://img.freepik.com/free-photo/speakers-with-extremely-high-volume-desk_23-2149625153.jpg?t=st=1733975888~exp=1733979488~hmac=6029669f07140ec180c4fdfea8b997018364a279c7fac6dbe1bfca62948863b7&w=996",
+      "https://img.freepik.com/free-photo/view-horizontal-bluetooth-speaker-with-simple-minimal-modern-design_23-2150807998.jpg",
+      "https://img.freepik.com/free-photo/high-angle-smart-speaker-home_23-2150171767.jpg",
+      "https://img.freepik.com/free-photo/speakers-with-extremely-high-volume-desk_23-2149625153.jpg",
     ],
     price: 11999,
     originalPrice: 14999,
@@ -771,9 +771,9 @@ const arr = [
   {
     name: "Action Camera JKL",
     images: [
-      "https://img.freepik.com/free-photo/vintage-young-man-filming_1368-6211.jpg?t=st=1733975943~exp=1733979543~hmac=a9335e95cbb401e00d68bb8b1c73d8f14f7a2653ef0eade0b2e3cdd34b83d89b&w=996",
-      "https://img.freepik.com/free-photo/vintage-young-man-filming_1368-6211.jpg?t=st=1733975943~exp=1733979543~hmac=a9335e95cbb401e00d68bb8b1c73d8f14f7a2653ef0eade0b2e3cdd34b83d89b&w=996",
-      "https://img.freepik.com/free-photo/young-man-with-retro-camera_155003-560.jpg?t=st=1733975987~exp=1733979587~hmac=38243cb60310a696aac6fe3999de9474fccb0a4e5c4bac1f50eaa39fe50a05ee&w=996",
+      "https://img.freepik.com/free-photo/vintage-young-man-filming_1368-6211.jpg",
+      "https://img.freepik.com/free-photo/vintage-young-man-filming_1368-6211.jpg",
+      "https://img.freepik.com/free-photo/young-man-with-retro-camera_155003-560.jpg",
     ],
     price: 15999,
     originalPrice: 19999,
@@ -786,9 +786,9 @@ const arr = [
   {
     name: "Portable Speaker MNO",
     images: [
-      "https://img.freepik.com/free-photo/man-using-smart-speaker_23-2149036847.jpg?t=st=1729395286~exp=1729398886~hmac=bf01f498a23f95b319de3a06772731a2a80c36f97ff2a309f7253a2d2b3d2051&w=996",
-      "https://img.freepik.com/free-photo/man-using-smart-speaker_23-2149036846.jpg?t=st=1729395316~exp=1729398916~hmac=03520650c7679d7d23ef98f8556c37eacaadbf99fddd06052242d1a6ecf972c9&w=360",
-      "https://img.freepik.com/free-photo/man-using-smart-speaker_23-2149036843.jpg?t=st=1729395341~exp=1729398941~hmac=22b2cdf2d7b6dfe16f769bcf94fa4293768c65eb0ebbaac60064bae249fe994d&w=996",
+      "https://img.freepik.com/free-photo/man-using-smart-speaker_23-2149036847.jpg",
+      "https://img.freepik.com/free-photo/man-using-smart-speaker_23-2149036846.jpg",
+      "https://img.freepik.com/free-photo/man-using-smart-speaker_23-2149036843.jpg",
     ],
     price: 2999,
     originalPrice: 3999,
@@ -801,9 +801,9 @@ const arr = [
   {
     name: "Electric Shaver STU",
     images: [
-      "https://img.freepik.com/free-photo/portrait-happy-smiling-bearded-man-showing-electric-razor_171337-17302.jpg?t=st=1733976030~exp=1733979630~hmac=c8034c1717a40a53f65f4b0ea19533b9f47c19cad84f2abfc14f8e605a8f1244&w=996",
-      "https://img.freepik.com/free-photo/man-doing-his-self-care-ritual_23-2149204946.jpg?t=st=1733976058~exp=1733979658~hmac=ae237000cf469d4f26b1d702edf10a37df76f2ec40d193820e963639146392bb&w=996",
-      "https://img.freepik.com/free-photo/portrait-young-man-trimming-his-beard-with-trimmer_23-2148213365.jpg?t=st=1729395446~exp=1729399046~hmac=a47d8562d0116dab543bb1916c9970f1f4c2d4b95d435b14b112cb7622b94200&w=1060",
+      "https://img.freepik.com/free-photo/portrait-happy-smiling-bearded-man-showing-electric-razor_171337-17302.jpg",
+      "https://img.freepik.com/free-photo/man-doing-his-self-care-ritual_23-2149204946.jpg",
+      "https://img.freepik.com/free-photo/portrait-young-man-trimming-his-beard-with-trimmer_23-2148213365.jpg",
     ],
     price: 3499,
     originalPrice: 4499,
@@ -816,9 +816,9 @@ const arr = [
   {
     name: "Smart Speaker XYZ",
     images: [
-      "https://img.freepik.com/free-photo/high-angle-smart-speaker-home_23-2150171756.jpg?t=st=1733976099~exp=1733979699~hmac=71a6aea88ed6e0d67548bb229719f9bdd39a691dcba6768afb39392ae7b0d925&w=900",
-      "https://img.freepik.com/free-photo/high-angle-smart-speaker-home_23-2150171755.jpg?t=st=1733976145~exp=1733979745~hmac=14728eee83190a773e79cb413476bba9ab4f018d701eeda4b7b2e9d450ac1ed3&w=900",
-      "https://img.freepik.com/free-photo/high-angle-smart-speaker-home_23-2150171754.jpg?t=st=1733976163~exp=1733979763~hmac=647d32a145a8b380945e0051c1fb29fb1c6c04d33680f657dd20434221a91ce8&w=900",
+      "https://img.freepik.com/free-photo/high-angle-smart-speaker-home_23-2150171756.jpg",
+      "https://img.freepik.com/free-photo/high-angle-smart-speaker-home_23-2150171755.jpg",
+      "https://img.freepik.com/free-photo/high-angle-smart-speaker-home_23-2150171754.jpg",
     ],
     price: 4999,
     originalPrice: 6499,
@@ -831,9 +831,9 @@ const arr = [
   {
     name: "Gaming Mouse ABC",
     images: [
-      "https://img.freepik.com/free-photo/view-neon-illuminated-gaming-desk-setup-with-keyboard_23-2149529362.jpg?t=st=1733976218~exp=1733979818~hmac=09e49e8315d32eab5135392ec6dba5bbb8eec93203c1d202e2d297a0171a59fd&w=996",
-      "https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529368.jpg?t=st=1733976241~exp=1733979841~hmac=70a99e875ebe810aaec5acf64726609330767938337216da1466268c10b01f6b&w=996",
-      "https://img.freepik.com/free-photo/view-neon-illuminated-gaming-desk-setup-with-keyboard_23-2149529359.jpg?t=st=1733976233~exp=1733979833~hmac=54178f93f085d61c07a871d98ea438bd3db6b1f84c54fe688db0828f485c9065&w=996",
+      "https://img.freepik.com/free-photo/view-neon-illuminated-gaming-desk-setup-with-keyboard_23-2149529362.jpg",
+      "https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529368.jpg",
+      "https://img.freepik.com/free-photo/view-neon-illuminated-gaming-desk-setup-with-keyboard_23-2149529359.jpg",
     ],
     price: 2499,
     originalPrice: 2999,
@@ -846,9 +846,9 @@ const arr = [
   {
     name: "Smart Doorbell DEF",
     images: [
-      "https://img.freepik.com/free-photo/people-interacting-with-ai-their-daily-lives_23-2151870994.jpg?t=st=1733976343~exp=1733979943~hmac=66e1ac20b7a4040ca603b2208dfc1bad6009b93b29a69e6bb280443e45357d58&w=996",
-      "https://img.freepik.com/free-photo/young-woman-presses-button-intercom_641386-184.jpg?t=st=1733976365~exp=1733979965~hmac=49e7fcbb54460d07ef8f6faa892c3a23123959084e25bd442d92b26921f80682&w=996",
-      "https://img.freepik.com/free-photo/medium-shot-woman-wearing-mask_23-2148767173.jpg?t=st=1733976380~exp=1733979980~hmac=b350f180c1b9b7bc51354f40f2e6497a32b9a1cc4b61ac7fc69c62010d688ebd&w=996",
+      "https://img.freepik.com/free-photo/people-interacting-with-ai-their-daily-lives_23-2151870994.jpg",
+      "https://img.freepik.com/free-photo/young-woman-presses-button-intercom_641386-184.jpg",
+      "https://img.freepik.com/free-photo/medium-shot-woman-wearing-mask_23-2148767173.jpg",
     ],
     price: 7999,
     originalPrice: 9999,
@@ -861,9 +861,9 @@ const arr = [
   {
     name: "Induction Cooktop GHI",
     images: [
-      "https://img.freepik.com/free-photo/woman-preparing-rigatoni-pasta-saucepan_23-2147893591.jpg?t=st=1729397080~exp=1729400680~hmac=6e3f20d6e9ec3e544643bb99db8c4270a6645403e8d1dbb245d8e184ab574db2&w=360",
-      "https://img.freepik.com/free-photo/close-up-woman-preparing-pasta-kitchen-counter_23-2147893396.jpg?t=st=1729397100~exp=1729400700~hmac=69432f58ad9ff0f7a9fcd2fec2cd144a8832704a4c67754a929d56bbfd968dc6&w=900",
-      "https://img.freepik.com/free-photo/smiling-woman-preparing-food-holding-digital-tablet_23-2147893598.jpg?t=st=1729397134~exp=1729400734~hmac=60cd94d3c906591d35c85c8f3183e0a1d254626fc7f44c3afa89c9ba07a8c1c4&w=360",
+      "https://img.freepik.com/free-photo/woman-preparing-rigatoni-pasta-saucepan_23-2147893591.jpg",
+      "https://img.freepik.com/free-photo/close-up-woman-preparing-pasta-kitchen-counter_23-2147893396.jpg",
+      "https://img.freepik.com/free-photo/smiling-woman-preparing-food-holding-digital-tablet_23-2147893598.jpg",
     ],
     price: 2999,
     originalPrice: 3999,
@@ -876,9 +876,9 @@ const arr = [
   {
     name: "Smart Security Camera JKL",
     images: [
-      "https://img.freepik.com/free-photo/view-round-modern-webcam-with-shadows-background_23-2150808001.jpg?t=st=1729397165~exp=1729400765~hmac=139901328b7edb98ce1af3968a8ce0741538dac613710e61a33a795fa103bd75&w=360",
-      "https://img.freepik.com/free-psd/cctv-security-template-design_23-2151461452.jpg?t=st=1733976440~exp=1733980040~hmac=f515253fdb16ec6dfff37e75140cbc6303f7d1417d657142649bafe929551adf&w=360",
-      "https://img.freepik.com/free-photo/view-round-modern-webcam-with-shadows-background_23-2150808004.jpg?t=st=1729397206~exp=1729400806~hmac=57ced81ace2cfb0eca72defbc5e0c6d5ec16e0bb4d0e10acf84ca34463ab415f&w=360",
+      "https://img.freepik.com/free-photo/view-round-modern-webcam-with-shadows-background_23-2150808001.jpg",
+      "https://img.freepik.com/free-psd/cctv-security-template-design_23-2151461452.jpg",
+      "https://img.freepik.com/free-photo/view-round-modern-webcam-with-shadows-background_23-2150808004.jpg",
     ],
     price: 6499,
     originalPrice: 7999,

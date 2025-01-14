@@ -10,6 +10,8 @@ const {
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
+const { OAuth2Client } = require("google-auth-library");
+
 const createToken = (_id, email) => {
   return jwt.sign(
     { _id, email },
@@ -157,4 +159,67 @@ const getUser = async (req, res) => {
   }
 };
 
-module.exports = { login, Signup, googleAuthCallback, getUser };
+const googleAuthCallbackNew = async (req, res) => {
+  try {
+    const tokenT = req.body.token; // The token sent from the frontend
+
+    if (!tokenT) {
+      return res.status(400).json({ message: "Token is missing" });
+    }
+    const client = new OAuth2Client(process.env.CLIENTID);
+
+    // Verify the Google ID token using OAuth2Client
+    const ticket = await client.verifyIdToken({
+      idToken: tokenT,
+      audience: process.env.CLIENTID, // Your Google OAuth 2.0 Client ID
+    });
+
+    const payload = ticket.getPayload(); // Get user info from the token
+    const email = payload.email;
+    const name = payload.name;
+    // const profilePicture = payload.picture;
+    const googleId = payload.sub; // This is the unique ID from Google
+    console.log(payload);
+
+    // Check if the user already exists in the database
+    let user;
+    user = await User.findOne({
+      $or: [{ googleAuthId: googleId }, { email: email }],
+    });
+
+    if (!user) {
+      user = new User({
+        googleAuthId: googleId,
+        name: name,
+        email: email,
+      });
+      await user.save();
+
+      await sendWelcomeEmail({
+        name: name,
+        email: email,
+      });
+    }
+
+    await user.save();
+
+    const token = createToken(user._id, email);
+    return res.json({
+      name: user.name,
+      email: user.email,
+      userId: user._id,
+      token,
+    });
+  } catch (e) {
+    console.error(e);
+    res.status(400).json({ error: e.message });
+  }
+};
+
+module.exports = {
+  login,
+  Signup,
+  googleAuthCallback,
+  getUser,
+  googleAuthCallbackNew,
+};
