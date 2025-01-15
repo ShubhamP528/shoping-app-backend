@@ -12,6 +12,7 @@ const userAuthRoutes = require("./route/userAuth-routes");
 const cartRoutes = require("./route/cart-routes");
 const paymentRoutes = require("./route/payment-routes");
 const orderRoutes = require("./route/order-routes");
+const addressRoutes = require("./route/address-routes");
 
 dbconnect();
 
@@ -27,6 +28,7 @@ app.use("/api", userAuthRoutes);
 app.use("/api", cartRoutes);
 app.use("/api", paymentRoutes);
 app.use("/api", orderRoutes);
+app.use("/api", addressRoutes);
 
 app.listen(8000 || process.env.PORT, () => {
   console.log(`Server is running on port ${8000 || process.env.PORT}`);

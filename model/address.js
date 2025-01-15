@@ -7,7 +7,7 @@ const addressSchema = new Schema(
       type: String,
       required: true, // Name of the person receiving the delivery
     },
-    mobileNumber: {
+    phone: {
       type: String,
       required: true, // Mobile number for delivery contact
       validate: {
@@ -18,29 +18,9 @@ const addressSchema = new Schema(
           `${props.value} is not a valid Indian phone number!`,
       },
     },
-    streetAddress: {
+    pincode: {
       type: String,
-      required: true, // Address of the building or area
-    },
-    landmark: {
-      type: String,
-      required: false, // Landmark near the address (optional)
-    },
-    area: {
-      type: String,
-      required: true, // Local area or locality name (example: "Koramangala")
-    },
-    city: {
-      type: String,
-      required: true, // City name (example: "Bangalore")
-    },
-    state: {
-      type: String,
-      required: true, // State name (example: "Karnataka")
-    },
-    postalCode: {
-      type: String,
-      required: true, // Pincode (example: "560001")
+      required: true, // Postal code for the delivery address
       validate: {
         validator: function (v) {
           return /^[1-9][0-9]{5}$/.test(v); // Indian postal code validation
@@ -48,22 +28,34 @@ const addressSchema = new Schema(
         message: (props) => `${props.value} is not a valid postal code!`,
       },
     },
-    country: {
+    locality: {
       type: String,
-      default: "India", // Fixed as India for delivery purposes
+      required: true, // Locality or neighborhood
     },
-    deliveryInstructions: {
+    address: {
       type: String,
-      required: false, // Special instructions for delivery (optional)
+      required: true, // Full address (area and street)
     },
-    addressType: {
+    city: {
       type: String,
-      enum: ["Home", "Office", "Other"], // Type of address: Home, Office, etc.
+      required: true, // City name
+    },
+    state: {
+      type: String,
+      required: true, // State name
+    },
+    landmark: {
+      type: String,
+      required: false, // Landmark near the address (optional)
+    },
+    type: {
+      type: String,
+      enum: ["HOME", "WORK"], // Address type (HOME or WORK)
       required: true,
     },
     isDefault: {
       type: Boolean,
-      default: false, // Whether this is the default address for delivery
+      default: false, // Indicates if the address is the default one
     },
   },
   {

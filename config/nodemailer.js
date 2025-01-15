@@ -167,6 +167,18 @@ const deliveryEmail = `<!DOCTYPE html>
       .order-summary p {
         margin: 0;
       }
+      .address {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+      .address h3 {
+        color: #4338ca;
+      }
+      .address p {
+        margin: 5px 0;
+      }
     </style>
   </head>
   <body>
@@ -176,12 +188,8 @@ const deliveryEmail = `<!DOCTYPE html>
       </div>
       <div class="content">
         <h2>Your Order Has Been Placed!</h2>
-        <p>
-          Hi {{username}},
-        </p>
-        <p>
-          We’re excited to let you know that your order has been successfully placed! Your items will be delivered within <strong>3 business days</strong>.
-        </p>
+        <p>Hi {{username}},</p>
+        <p>We’re excited to let you know that your order has been successfully placed! Your items will be delivered within <strong>3 business days</strong>.</p>
 
         <div class="order-summary">
           <h3>Order Summary</h3>
@@ -190,28 +198,28 @@ const deliveryEmail = `<!DOCTYPE html>
           <p><strong>Estimated Delivery Date:</strong> {{delivery_date}}</p>
         </div>
 
-        <p>
-          You can track your order status or make changes by visiting your order
-          page:
-        </p>
+        <div class="address">
+          <h3>Delivery Address</h3>
+          <p><strong>Name:</strong> {{name}}</p>
+          <p><strong>Phone:</strong> {{phone}}</p>
+          <p><strong>Address:</strong> {{address}}, {{locality}}, {{city}}, {{state}} - {{pincode}}</p>
+          {{#if landmark}}<p><strong>Landmark:</strong> {{landmark}}</p>{{/if}}
+        </div>
+
+        <p>You can track your order status or make changes by visiting your order page:</p>
         <a href="https://smart-shop-kro.netlify.app/orders" class="btn">View My Order</a>
 
-        <p>
-          If you have any questions or need further assistance, feel free to contact our support team at <a href="mailto:support@smartshopkro.com">support@smartshopkro.com</a>.
-        </p>
+        <p>If you have any questions or need further assistance, feel free to contact our support team at <a href="mailto:support@smartshopkro.com">support@smartshopkro.com</a>.</p>
 
         <p>Happy shopping!</p>
         <p><strong>The Smart Shop Kro Team</strong></p>
       </div>
       <div class="footer">
-        <p>
-          &copy; 2024 Smart Shop Kro. All rights reserved. If you didn't make this purchase, please <a href="mailto:support@smartshopkro.com">contact us</a> immediately.
-        </p>
+        <p>&copy; 2024 Smart Shop Kro. All rights reserved. If you didn't make this purchase, please <a href="mailto:support@smartshopkro.com">contact us</a> immediately.</p>
       </div>
     </div>
   </body>
-</html>
-`;
+</html>`;
 
 const deliveryTemplate = handlebars.compile(deliveryEmail);
 
@@ -274,10 +282,23 @@ const sendDeliveryEmail = (user) => {
     return deliveryDate.toISOString().split("T")[0]; // Format as YYYY-MM-DD
   };
 
+  console.log(user.address);
+
   const filledTemplate = deliveryTemplate({
     username: user.name,
     order_number: user.order_number,
     total_amount: user.total_amount,
+    name: user.address.name,
+    phone: user.address.phone,
+    pincode: user.address.pincode,
+    locality: user.address.locality,
+    address: user.address.address,
+    city: user.address.city,
+    state: user.address.state,
+    landmark: user.address.landmark,
+    state: user.address.state,
+    landmark: user.address.landmark,
+    type: user.address.type,
     delivery_date: calculateDeliveryDate,
   });
 

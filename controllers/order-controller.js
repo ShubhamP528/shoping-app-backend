@@ -5,10 +5,11 @@ const path = require("path");
 
 const GetOrder = async (req, res) => {
   try {
-    console.log(req.user)
-    const orders = await Order.find({ user: req.user._id }).populate(
-      "items.product"
-    );
+    console.log(req.user);
+    const orders = await Order.find({ user: req.user._id })
+      .populate("items.product address user")
+      .sort({ createdAt: -1 }); // Sort in descending order of createdAt
+
     return res.status(200).json(orders);
   } catch (err) {
     return res.status(500).json({ error: err.message });
@@ -20,7 +21,8 @@ const showOrderSummary = async (req, res) => {
     const { id } = req.params;
     const order = await Order.findById(id)
       .populate("user")
-      .populate("items.product");
+      .populate("items.product")
+      .populate("address");
     return res.status(200).json(order);
   } catch (err) {
     return res.status(500).json({ error: err.message });
@@ -30,11 +32,12 @@ const showOrderSummary = async (req, res) => {
 const getOrderPdf = async (req, res) => {
   try {
     const order = await Order.findById(req.params.orderId).populate(
-      "items.product user"
+      "items.product user address"
     );
     if (!order) {
       return res.status(404).send("Order not found");
     }
+    console.log(order);
 
     const doc = new PDFDocument();
     const fontPath = path.join(
@@ -58,18 +61,36 @@ const getOrderPdf = async (req, res) => {
       res.send(pdfBuffer);
     });
 
+    // Order details
     doc.fontSize(16).text(`Order ID: ${order._id}`, { align: "center" });
     doc.moveDown();
     doc.fontSize(12).text(`Customer Name: ${order.user.username}`);
     doc.text(`Customer Email: ${order.user.email}`);
-    // doc.text(`Delivery Address: ${order.deliveryAddress}`);
+    doc.moveDown();
+
+    // Address details
+    const address = order.address;
+    if (address) {
+      doc.text("Delivery Address:", { underline: true });
+      doc.text(`${address.name}`);
+      doc.text(`${address.address}`);
+      doc.text(
+        `${address.locality}, ${address.city}, ${address.state} - ${address.pincode}`
+      );
+      doc.text(`Phone: ${address.phone}`);
+      if (address.landmark) {
+        doc.text(`Landmark: ${address.landmark}`);
+      }
+    }
+
     doc.moveDown();
     doc.text("Items:", { underline: true });
 
+    // Item details
     order.items.forEach((item) => {
       doc.text(
-        `${item.book.title} (x${item.quantity}) - ₹${
-          item.book.price * item.quantity
+        `${item.product.title} (x${item.quantity}) - ₹${
+          item.product.price * item.quantity
         }`
       );
     });

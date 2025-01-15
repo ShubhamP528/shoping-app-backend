@@ -59,6 +59,12 @@ const userSchema = new mongoose.Schema({
       },
     },
   ],
+  address: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Address",
+    },
+  ],
 });
 
 userSchema.plugin(passportLocalmongoose); // it will add user and passport property automatically  and other Stuff!!

@@ -19,6 +19,11 @@ const orderSchema = new mongoose.Schema({
   ],
   totalAmount: { type: Number, required: true },
   status: { type: String, default: "pending" },
+  address: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Address",
+  },
+
   createdAt: { type: Date, default: Date.now },
 });
 
