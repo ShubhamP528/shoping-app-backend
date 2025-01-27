@@ -169,11 +169,17 @@ const googleAuthCallbackNew = async (req, res) => {
     }
     const client = new OAuth2Client(process.env.CLIENTID);
 
+    console.log(client);
+
+    console.log(process.env.CLIENTID);
+
     // Verify the Google ID token using OAuth2Client
     const ticket = await client.verifyIdToken({
       idToken: tokenT,
       audience: process.env.CLIENTID, // Your Google OAuth 2.0 Client ID
     });
+
+    console.log(ticket);
 
     const payload = ticket.getPayload(); // Get user info from the token
     const email = payload.email;

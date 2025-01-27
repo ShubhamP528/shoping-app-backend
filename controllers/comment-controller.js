@@ -27,7 +27,9 @@ exports.addComment = async (req, res) => {
 
     await review.save(product);
 
-    res.status(200).json({ message: "comment added successfully , " });
+    res
+      .status(200)
+      .json({ message: "comment added successfully ", reviewId: review._id });
   } catch (error) {
     console.log(error);
     return res.status(400).json({ error: error.message });
