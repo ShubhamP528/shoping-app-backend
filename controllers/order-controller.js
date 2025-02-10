@@ -2,10 +2,11 @@ const Order = require("../model/order");
 const PDFDocument = require("pdfkit");
 const fs = require("fs");
 const path = require("path");
+const User = require("../model/user");
 
 const GetOrder = async (req, res) => {
   try {
-    console.log(req.user);
+    // console.log(req.user);
     const orders = await Order.find({ user: req.user._id })
       .populate("items.product address user")
       .sort({ createdAt: -1 }); // Sort in descending order of createdAt
@@ -18,14 +19,55 @@ const GetOrder = async (req, res) => {
 
 const showOrderSummary = async (req, res) => {
   try {
+    console.log("Hello");
     const { id } = req.params;
     const order = await Order.findById(id)
       .populate("user")
       .populate("items.product")
-      .populate("address");
+      .populate("address")
+      ?.populate("card");
+
+    console.log(order);
     return res.status(200).json(order);
   } catch (err) {
     return res.status(500).json({ error: err.message });
+  }
+};
+
+const PlaceOrder = async (req, res) => {
+  try {
+    const order = req.body;
+    console.log(req.body);
+
+    const user = await User.findOne(req.user._id);
+    const cart = user.cart;
+
+    if (!cart || cart.length === 0) {
+      return res.status(200).json({ message: "Cart is empty" });
+    }
+
+    const placeOrder = await Order.create({
+      user: user._id,
+      items: cart,
+      totalAmount: order.amount,
+      status: "success",
+      createdAt: new Date(), // Set to current date and time
+      address: order.addressId,
+      card: order.cardId,
+      shippingFee: order.shippingFee,
+      shippingMethod: order.shippingMethod,
+    });
+
+    user.cart = [];
+    await user.save();
+
+    console.log("This is order =>   ", placeOrder);
+    return res.status(201).json(placeOrder);
+  } catch (error) {
+    console.log(error);
+    return res
+      .status(500)
+      .send({ message: "Server Error", error: error.message });
   }
 };
 
@@ -106,4 +148,4 @@ const getOrderPdf = async (req, res) => {
   }
 };
 
-module.exports = { GetOrder, showOrderSummary, getOrderPdf };
+module.exports = { GetOrder, showOrderSummary, getOrderPdf, PlaceOrder };

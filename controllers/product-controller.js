@@ -1,6 +1,7 @@
 const Product = require("../model/product");
 
 const getProducts = async (req, res) => {
+  console.log("getProducts");
   const product = await Product.find({});
   res.send(product);
 };

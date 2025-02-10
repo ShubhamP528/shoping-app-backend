@@ -23,6 +23,12 @@ const orderSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Address",
   },
+  card: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Card",
+  },
+  shippingFee: { type: Number, default: 0 },
+  shippingMethod: { type: String, default: "Standard" }, // Possible values: Standard, Express
 
   createdAt: { type: Date, default: Date.now },
 });
