@@ -46,7 +46,6 @@ const userSchema = new mongoose.Schema({
     default: "Customer",
     trim: true,
   },
-
   cart: [
     {
       product: {
@@ -69,6 +68,12 @@ const userSchema = new mongoose.Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Card",
+    },
+  ],
+  favorite: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Product",
     },
   ],
 });
