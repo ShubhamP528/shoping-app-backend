@@ -3,12 +3,14 @@ const Product = require("../model/product");
 const addFavorite = async (req, res) => {
   // Add favorite functionality here
   try {
+    console.log("Adding");
     const { productId } = req.body;
     const user = req.user;
     user.favorite.push(productId);
     await user.save();
     res.status(201).json({ message: "Product added to favorites" });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: error.message });
   }
 };
@@ -16,6 +18,8 @@ const addFavorite = async (req, res) => {
 const removeFavorite = async (req, res) => {
   // Remove favorite functionality here
   try {
+    console.log("removing");
+
     const { productId } = req.body;
     console.log(productId);
     const user = req.user;
@@ -25,6 +29,7 @@ const removeFavorite = async (req, res) => {
     await user.save();
     res.status(200).json({ message: "Product removed from favorites" });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: error.message });
   }
 };
@@ -36,6 +41,7 @@ const getFavorites = async (req, res) => {
     const favorites = await Product.find({ _id: { $in: user.favorite } });
     res.json({ favorites });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: error.message });
   }
 };

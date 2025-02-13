@@ -81,16 +81,28 @@ const getOrderPdf = async (req, res) => {
     }
     console.log(order);
 
-    const doc = new PDFDocument();
-    const fontPath = path.join(
+    const doc = new PDFDocument({ margin: 50 });
+
+    // Register fonts - ensure these files exist in your fonts folder
+    const regularFontPath = path.join(
       __dirname,
       "..",
       "fonts",
       "NotoSans-Regular.ttf"
     );
-    doc.registerFont("NotoSans", fontPath);
+    const boldFontPath = path.join(
+      __dirname,
+      "..",
+      "fonts",
+      "NotoSans-Bold.ttf"
+    );
+    doc.registerFont("NotoSans", regularFontPath);
+    doc.registerFont("NotoSansBold", boldFontPath);
+
+    // Set default font to regular
     doc.font("NotoSans");
 
+    // Collect PDF data chunks
     const chunks = [];
     doc.on("data", (chunk) => chunks.push(chunk));
     doc.on("end", () => {
@@ -103,44 +115,126 @@ const getOrderPdf = async (req, res) => {
       res.send(pdfBuffer);
     });
 
-    // Order details
-    doc.fontSize(16).text(`Order ID: ${order._id}`, { align: "center" });
-    doc.moveDown();
-    doc.fontSize(12).text(`Customer Name: ${order.user.username}`);
-    doc.text(`Customer Email: ${order.user.email}`);
-    doc.moveDown();
+    // HEADER with bold font
+    doc
+      .font("NotoSansBold")
+      .fontSize(16)
+      .text("Smart Solution Pvt. Ltd.", 50, 50);
+    // doc
+    //   .font("NotoSans")
+    //   .fontSize(12)
+    //   .text("www.smart-shop-kro.netlify.app", 50, 70);
+    // Horizontal line
+    doc.moveTo(50, 90).lineTo(550, 90).stroke();
 
-    // Address details
-    const address = order.address;
-    if (address) {
-      doc.text("Delivery Address:", { underline: true });
-      doc.text(`${address.name}`);
-      doc.text(`${address.address}`);
-      doc.text(
-        `${address.locality}, ${address.city}, ${address.state} - ${address.pincode}`
+    // Invoice Title in bold
+    doc
+      .font("NotoSansBold")
+      .fontSize(14)
+      .text(`Invoice for Order: ${order._id}`, 50, 100);
+
+    // User & Order Info (Regular font)
+    doc
+      .font("NotoSans")
+      .fontSize(12)
+      .text(`User: ${order.user.name}`, 50, 130)
+      .text(`Email: ${order.user.email}`, 50, 145)
+      .text(`Status: ${order.status}`, 50, 160)
+      .text(
+        `Order Date: ${new Date(order.createdAt).toLocaleString()}`,
+        50,
+        175
       );
-      doc.text(`Phone: ${address.phone}`);
-      if (address.landmark) {
-        doc.text(`Landmark: ${address.landmark}`);
+
+    // Divider
+    doc.moveTo(50, 190).lineTo(550, 190).stroke();
+
+    let currentY = 200;
+
+    // Address Section (if exists)
+    if (order.address) {
+      doc.font("NotoSansBold").text("Delivery Address:", 50, currentY);
+      currentY += 15;
+      doc.font("NotoSans").text(order.address.name, 50, currentY);
+      currentY += 15;
+      doc.text(order.address.address, 50, currentY);
+      currentY += 15;
+      doc.text(
+        `${order.address.locality}, ${order.address.city}, ${order.address.state} - ${order.address.pincode}`,
+        50,
+        currentY
+      );
+      currentY += 15;
+      doc.text(`Phone: ${order.address.phone}`, 50, currentY);
+      if (order.address.landmark) {
+        currentY += 15;
+        doc.text(`Landmark: ${order.address.landmark}`, 50, currentY);
       }
+      currentY += 20;
+      doc.moveTo(50, currentY).lineTo(550, currentY).stroke();
+      currentY += 10;
     }
 
-    doc.moveDown();
-    doc.text("Items:", { underline: true });
+    // Items Table Header in bold
+    doc.font("NotoSansBold").fontSize(12).fillColor("black");
+    doc.text("Product", 50, currentY);
+    doc.text("Quantity", 250, currentY, { width: 50, align: "center" });
+    doc.text("Price", 320, currentY, { width: 70, align: "right" });
+    doc.text("Total", 400, currentY, { width: 70, align: "right" });
+    currentY += 20;
 
-    // Item details
+    // Items Table Rows in regular font
     order.items.forEach((item) => {
-      doc.text(
-        `${item.product.title} (x${item.quantity}) - ₹${
-          item.product.price * item.quantity
-        }`
-      );
+      doc.font("NotoSans");
+      doc.text(item.product.name, 50, currentY);
+      doc.text(`${item.quantity}`, 250, currentY, {
+        width: 50,
+        align: "center",
+      });
+      doc.text(`${item.product.price}/-`, 320, currentY, {
+        width: 70,
+        align: "right",
+      });
+      doc.text(`${item.quantity * item.product.price}/-`, 400, currentY, {
+        width: 70,
+        align: "right",
+      });
+      currentY += 20;
     });
 
-    doc.moveDown();
-    doc.text(`Total Amount: ₹${order.totalAmount}`);
-    doc.text(`Status: ${order.status}`);
-    doc.text(`Date: ${new Date(order.createdAt).toLocaleDateString()}`);
+    // Calculate subtotal and total amounts
+    const subtotal = order.items.reduce(
+      (acc, item) => acc + item.product.price * item.quantity,
+      0
+    );
+    const totalAmount = order.totalAmount;
+
+    currentY += 10;
+    doc.moveTo(50, currentY).lineTo(550, currentY).stroke();
+    currentY += 10;
+
+    // Totals (using bold for labels)
+    doc
+      .font("NotoSansBold")
+      .text(`Subtotal: `, 50, currentY, { continued: true });
+    doc.font("NotoSans").text(`${subtotal}/-`);
+    currentY += 15;
+    doc
+      .font("NotoSansBold")
+      .text(`Total Amount: `, 50, currentY, { continued: true });
+    doc.font("NotoSans").text(`${totalAmount}/-`);
+    currentY += 30;
+
+    // Footer with Terms in small regular font
+    doc
+      .font("NotoSans")
+      .fontSize(8)
+      .text(
+        "Terms and Conditions: All sales are final. No refunds.",
+        50,
+        currentY,
+        { align: "center", width: 500 }
+      );
 
     doc.end();
   } catch (error) {

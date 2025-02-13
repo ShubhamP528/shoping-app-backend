@@ -9,7 +9,6 @@ const getProducts = async (req, res) => {
 const addProduct = async (req, res) => {
   const { product } = req.body;
 
-  console.log(product);
   if (!product) {
     return res.status(400).send("Product data is required");
   }
