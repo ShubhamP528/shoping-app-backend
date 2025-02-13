@@ -433,10 +433,207 @@ const PlaceOrder = async (req, res) => {
 //   }
 // };
 
+// const getOrderPdf = async (req, res) => {
+//   try {
+//     const order = await Order.findById(req.params.orderId).populate(
+//       "items.product user address card"
+//     );
+//     if (!order) {
+//       return res.status(404).send("Order not found");
+//     }
+//     console.log(order);
+
+//     const doc = new PDFDocument({ margin: 50, size: "A4" });
+
+//     // Register fonts (ensure these font files exist)
+//     const regularFontPath = path.join(
+//       __dirname,
+//       "..",
+//       "fonts",
+//       "NotoSans-Regular.ttf"
+//     );
+//     const boldFontPath = path.join(
+//       __dirname,
+//       "..",
+//       "fonts",
+//       "NotoSans-Bold.ttf"
+//     );
+//     doc.registerFont("NotoSans", regularFontPath);
+//     doc.registerFont("NotoSansBold", boldFontPath);
+//     doc.font("NotoSans");
+
+//     // Buffer chunks for output
+//     const chunks = [];
+//     doc.on("data", (chunk) => chunks.push(chunk));
+//     doc.on("end", () => {
+//       const pdfBuffer = Buffer.concat(chunks);
+//       res.setHeader(
+//         "Content-disposition",
+//         `attachment; filename="order_${order._id}.pdf"`
+//       );
+//       res.setHeader("Content-type", "application/pdf");
+//       res.send(pdfBuffer);
+//     });
+
+//     // ---------------- Header Section ----------------
+//     // Draw a colored rectangle for header background with rounded corners
+//     doc.roundedRect(50, 30, 500, 70, 10).fill("#2980b9");
+//     // Optional: add company logo (adjust path as needed)
+//     const logoPath = path.join(__dirname, "..", "assets", "logo.png");
+//     // If logo exists, display it at top-left (uncomment if you have a logo)
+//     // doc.image(logoPath, 60, 35, { width: 50 });
+
+//     // Company Name & Website
+//     doc
+//       .fillColor("white")
+//       .font("NotoSansBold")
+//       .fontSize(22)
+//       .text("Smart Solution Pvt. Ltd.", 120, 40, { align: "left" });
+//     // doc
+//     //   .font("NotoSans")
+//     //   .fontSize(12)
+//     //   .text("www.smart-shop-kro.netlify.app", 120, 68, { align: "left" });
+//     doc.fillColor("black");
+
+//     // Divider below header
+//     doc.moveTo(50, 110).lineTo(550, 110).stroke("#cccccc");
+
+//     // ---------------- Invoice Title ----------------
+//     doc
+//       .font("NotoSansBold")
+//       .fontSize(18)
+//       .fillColor("#2980b9")
+//       .text(`Invoice for Order: ${order._id}`, 50, 120);
+//     doc.fillColor("black");
+
+//     // ---------------- Customer & Order Info ----------------
+//     let currentY = 150;
+//     // Background for info section
+//     doc.roundedRect(50, currentY, 500, 60, 5).fill("#f9f9f9");
+//     doc.fillColor("black").font("NotoSans").fontSize(12);
+//     doc.text(`User: ${order.user.name}`, 60, currentY + 10);
+//     doc.text(`Email: ${order.user.email}`, 60, currentY + 25);
+//     doc.text(`Status: ${order.status}`, 300, currentY + 10);
+//     doc.text(
+//       `Order Date: ${new Date(order.createdAt).toLocaleString()}`,
+//       300,
+//       currentY + 25
+//     );
+//     currentY += 80;
+
+//     // ---------------- Delivery Address ----------------
+//     if (order.address) {
+//       doc
+//         .font("NotoSansBold")
+//         .fontSize(12)
+//         .fillColor("#2980b9")
+//         .text("Delivery Address:", 50, currentY);
+//       currentY += 15;
+//       doc.font("NotoSans").fontSize(12).fillColor("black");
+//       doc.text(order.address.name, 50, currentY);
+//       currentY += 15;
+//       doc.text(order.address.address, 50, currentY);
+//       currentY += 15;
+//       doc.text(
+//         `${order.address.locality}, ${order.address.city}, ${order.address.state} - ${order.address.pincode}`,
+//         50,
+//         currentY
+//       );
+//       currentY += 15;
+//       doc.text(`Phone: ${order.address.phone}`, 50, currentY);
+//       if (order.address.landmark) {
+//         currentY += 15;
+//         doc.text(`Landmark: ${order.address.landmark}`, 50, currentY);
+//       }
+//       currentY += 20;
+//       doc.moveTo(50, currentY).lineTo(550, currentY).stroke("#cccccc");
+//       currentY += 10;
+//     }
+
+//     // ---------------- Items Table Header ----------------
+//     // Draw header background for table columns
+//     doc.roundedRect(50, currentY, 500, 20, 3).fill("#2980b9");
+//     doc.fillColor("white").font("NotoSansBold").fontSize(12);
+//     doc.text("Product", 55, currentY + 3);
+//     doc.text("Quantity", 250, currentY + 3, { width: 60, align: "center" });
+//     doc.text("Price", 330, currentY + 3, { width: 70, align: "right" });
+//     doc.text("Total", 410, currentY + 3, { width: 70, align: "right" });
+//     currentY += 25;
+
+//     // ---------------- Items Table Rows ----------------
+//     doc.font("NotoSans").fontSize(12).fillColor("black");
+//     order.items.forEach((item, index) => {
+//       // Alternate row background colors
+//       if (index % 2 === 0) {
+//         doc.rect(50, currentY - 2, 500, 20).fill("#f2f2f2");
+//       }
+//       doc.fillColor("black");
+//       doc.text(item.product.name, 55, currentY);
+//       doc.text(String(item.quantity), 250, currentY, {
+//         width: 60,
+//         align: "center",
+//       });
+//       doc.text(`${item.product.price}/-`, 330, currentY, {
+//         width: 70,
+//         align: "right",
+//       });
+//       doc.text(`${item.quantity * item.product.price}/-`, 410, currentY, {
+//         width: 70,
+//         align: "right",
+//       });
+//       currentY += 20;
+//     });
+
+//     // ---------------- Totals Section ----------------
+//     const subtotal = order.items.reduce(
+//       (acc, item) => acc + item.product.price * item.quantity,
+//       0
+//     );
+//     const totalAmount = order.totalAmount;
+//     currentY += 10;
+//     doc.moveTo(50, currentY).lineTo(550, currentY).stroke("#cccccc");
+//     currentY += 10;
+//     doc
+//       .font("NotoSansBold")
+//       .text("Subtotal:", 50, currentY, { continued: true });
+//     doc
+//       .font("NotoSans")
+//       .text(` ${subtotal}/-`, { align: "right", continued: true });
+//     doc.text("", 450, currentY);
+//     currentY += 15;
+//     doc
+//       .font("NotoSansBold")
+//       .text("Total Amount:", 50, currentY, { continued: true });
+//     doc
+//       .font("NotoSans")
+//       .text(` ${totalAmount}/-`, { align: "right", continued: true });
+//     doc.text("", 450, currentY);
+//     currentY += 30;
+
+//     // ---------------- Footer Section ----------------
+//     // Draw footer background
+//     doc.roundedRect(50, currentY, 500, 30, 5).fill("#f9f9f9");
+//     doc
+//       .fillColor("black")
+//       .font("NotoSans")
+//       .fontSize(10)
+//       .text(
+//         "Thank you for your business! Terms and Conditions: All sales are final. No refunds.",
+//         55,
+//         currentY + 8,
+//         { align: "center", width: 490 }
+//       );
+
+//     doc.end();
+//   } catch (error) {
+//     res.status(500).send({ message: "Server Error", error: error.message });
+//   }
+// };
+
 const getOrderPdf = async (req, res) => {
   try {
     const order = await Order.findById(req.params.orderId).populate(
-      "items.product user address"
+      "items.product user address card"
     );
     if (!order) {
       return res.status(404).send("Order not found");
@@ -445,7 +642,7 @@ const getOrderPdf = async (req, res) => {
 
     const doc = new PDFDocument({ margin: 50, size: "A4" });
 
-    // Register fonts (ensure these font files exist)
+    // Register fonts (ensure these font files exist in your fonts folder)
     const regularFontPath = path.join(
       __dirname,
       "..",
@@ -476,11 +673,10 @@ const getOrderPdf = async (req, res) => {
     });
 
     // ---------------- Header Section ----------------
-    // Draw a colored rectangle for header background with rounded corners
+    // Draw a colored rounded rectangle as header background
     doc.roundedRect(50, 30, 500, 70, 10).fill("#2980b9");
-    // Optional: add company logo (adjust path as needed)
-    const logoPath = path.join(__dirname, "..", "assets", "logo.png");
-    // If logo exists, display it at top-left (uncomment if you have a logo)
+    // Optional: add company logo (if available, adjust path accordingly)
+    // const logoPath = path.join(__dirname, "..", "assets", "logo.png");
     // doc.image(logoPath, 60, 35, { width: 50 });
 
     // Company Name & Website
@@ -488,13 +684,15 @@ const getOrderPdf = async (req, res) => {
       .fillColor("white")
       .font("NotoSansBold")
       .fontSize(22)
-      .text("Smart Solution Pvt. Ltd.", 120, 40, { align: "left" });
+      .text("Smart Solution Pvt. Ltd.", 50, 54, {
+        align: "center",
+        width: 500,
+      });
     // doc
     //   .font("NotoSans")
     //   .fontSize(12)
     //   .text("www.smart-shop-kro.netlify.app", 120, 68, { align: "left" });
     doc.fillColor("black");
-
     // Divider below header
     doc.moveTo(50, 110).lineTo(550, 110).stroke("#cccccc");
 
@@ -551,7 +749,6 @@ const getOrderPdf = async (req, res) => {
     }
 
     // ---------------- Items Table Header ----------------
-    // Draw header background for table columns
     doc.roundedRect(50, currentY, 500, 20, 3).fill("#2980b9");
     doc.fillColor("white").font("NotoSansBold").fontSize(12);
     doc.text("Product", 55, currentY + 3);
@@ -589,7 +786,7 @@ const getOrderPdf = async (req, res) => {
       (acc, item) => acc + item.product.price * item.quantity,
       0
     );
-    const totalAmount = order.totalAmount;
+    const totalAmount = order.totalAmount + order.shippingFee;
     currentY += 10;
     doc.moveTo(50, currentY).lineTo(550, currentY).stroke("#cccccc");
     currentY += 10;
@@ -601,6 +798,16 @@ const getOrderPdf = async (req, res) => {
       .text(` ${subtotal}/-`, { align: "right", continued: true });
     doc.text("", 450, currentY);
     currentY += 15;
+
+    doc
+      .font("NotoSansBold")
+      .text("Shipping Fee:", 50, currentY, { continued: true });
+    doc
+      .font("NotoSans")
+      .text(` ${order.shippingFee}/-`, { align: "right", continued: true });
+    doc.text("", 450, currentY);
+    currentY += 15;
+
     doc
       .font("NotoSansBold")
       .text("Total Amount:", 50, currentY, { continued: true });
@@ -610,8 +817,30 @@ const getOrderPdf = async (req, res) => {
     doc.text("", 450, currentY);
     currentY += 30;
 
+    // ---------------- Shipping & Payment Info Section ----------------
+    // Draw a rounded rectangle background for this info section
+    doc.roundedRect(50, currentY, 500, 60, 5).fill("#f9f9f9");
+    doc
+      .fillColor("black")
+      .font("NotoSansBold")
+      .fontSize(12)
+      .text("Shipping & Payment Info:", 55, currentY + 10);
+    doc
+      .font("NotoSans")
+      .fontSize(12)
+      .text(`Shipping Fee: ₹${order.shippingFee}`, 55, currentY + 25);
+    doc.text(`Shipping Method: ${order.shippingMethod}`, 300, currentY + 25, {
+      width: 250,
+    });
+    // For payment, display card type in uppercase along with holder name (if desired)
+    doc.text(
+      `Payment Method: Card - ${order?.card?.type?.toUpperCase()}`,
+      55,
+      currentY + 40
+    );
+    currentY += 80;
+
     // ---------------- Footer Section ----------------
-    // Draw footer background
     doc.roundedRect(50, currentY, 500, 30, 5).fill("#f9f9f9");
     doc
       .fillColor("black")
@@ -629,4 +858,5 @@ const getOrderPdf = async (req, res) => {
     res.status(500).send({ message: "Server Error", error: error.message });
   }
 };
+
 module.exports = { GetOrder, showOrderSummary, getOrderPdf, PlaceOrder };
