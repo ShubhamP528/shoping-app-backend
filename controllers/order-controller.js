@@ -178,26 +178,30 @@ const getOrderPdf = async (req, res) => {
     // Items Table Header in bold
     doc.font("NotoSansBold").fontSize(12).fillColor("black");
     doc.text("Product", 50, currentY);
-    doc.text("Quantity", 250, currentY, { width: 50, align: "center" });
-    doc.text("Price", 320, currentY, { width: 70, align: "right" });
-    doc.text("Total", 400, currentY, { width: 70, align: "right" });
+    doc.text("Quantity", 250, currentY, { width: 80, align: "center" });
+    doc.text("Price", 320, currentY, { width: 70, align: "center" });
+    doc.text("Total", 400, currentY, { width: 70, align: "center" });
     currentY += 20;
 
     // Items Table Rows in regular font
     order.items.forEach((item) => {
       doc.font("NotoSans");
       doc.text(item.product.name, 50, currentY);
-      doc.text(`${item.quantity}`, 250, currentY, {
-        width: 50,
+      // doc.text(`${item.quantity}`, 250, currentY, {
+      //   width: 50,
+      //   align: "center",
+      // });
+      doc.text(String(item.quantity), 250, currentY, {
+        width: 80,
         align: "center",
       });
       doc.text(`${item.product.price}/-`, 320, currentY, {
         width: 70,
-        align: "right",
+        align: "center",
       });
       doc.text(`${item.quantity * item.product.price}/-`, 400, currentY, {
         width: 70,
-        align: "right",
+        align: "center",
       });
       currentY += 20;
     });

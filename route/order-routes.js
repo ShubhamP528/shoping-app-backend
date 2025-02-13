@@ -11,7 +11,11 @@ const requireAuth = require("../middleware/requireAuth");
 router.get("/orders", requireAuth, GetOrder);
 router.get("/order/:id", requireAuth, showOrderSummary);
 
-router.get("/order/:orderId/download", requireAuth, getOrderPdf);
+router.get(
+  "/order/:orderId/download",
+  //  requireAuth,
+  getOrderPdf
+);
 
 router.post("/placeOrder", requireAuth, PlaceOrder);
 
