@@ -10,6 +10,7 @@ const {
   getUser,
   googleAuthCallback,
   googleAuthCallbackNew,
+  googleAuthCallbackNewForApp,
 } = require("../controllers/userAuth-controller");
 const requireAuth = require("../middleware/requireAuth");
 
@@ -67,5 +68,6 @@ router.get("/logout", (req, res) => {
 router.get("/getUser", requireAuth, getUser);
 
 router.post("/auth/google/callback", googleAuthCallbackNew);
+router.post("/auth/google/app/callback", googleAuthCallbackNewForApp);
 
 module.exports = router;
